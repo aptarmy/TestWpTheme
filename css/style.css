@@ -15,25 +15,25 @@ body {
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
 }
 .widgetMenuSlide {
-	padding: 12px;
+	padding: 15px;
 }
 .widgetMenuSlide h4 {
-	color: rgb(250,210,50);
-	width: 100%;
+	color: rgb(40,0,0);
+	width: 95%;
 	background-color: rgb(100,100,100);
 	text-align: center;
 	font-size: 26px;
 	font-weight: bold;
 	font-family: tahoma;
 	line-height: 40px;
-	text-shadow: 1px 2px 2px black;
+	text-shadow: 0px 1px 2px rgb(180,180,180);
 	border-radius: 20px;
-	box-shadow: 0px 2px 2px rgb(120, 120, 120) inset;
-	margin: 0;
+	box-shadow: 0px 2px 3px rgb(120, 120, 120) inset;
+	margin: 5px 5px 0 8px;
 }
 .widgetMenuSlide ul {
 	padding: 0;
-	margin: 0;
+	margin-top: 0;
 }
 .widgetMenuSlide>ul {
 	background-color: rgb(26,26,26);
@@ -52,7 +52,7 @@ body {
 	color: rgb(180,120,30);
 	font-size: 22px;
 	font-weight: bold;
-	margin-top:-5px;
+	margin-top: -5px;
 }
 .widgetMenuSlide>ul>li>a:before {
 	content: '\e142 ';
