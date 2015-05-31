@@ -14,6 +14,65 @@ body {
 	background-color: rgb(50,50,50);
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
 }
+.widgetMenuSlide {
+	padding: 12px;
+}
+.widgetMenuSlide h4 {
+	color: rgb(250,210,50);
+	width: 100%;
+	background-color: rgb(100,100,100);
+	text-align: center;
+	font-size: 26px;
+	font-weight: bold;
+	font-family: tahoma;
+	line-height: 40px;
+	text-shadow: 1px 2px 2px black;
+	border-radius: 20px;
+	box-shadow: 0px 2px 2px rgb(120, 120, 120) inset;
+	margin: 0;
+}
+.widgetMenuSlide ul {
+	padding: 0;
+	margin: 0;
+}
+.widgetMenuSlide>ul {
+	background-color: rgb(26,26,26);
+	border-radius: 20px;
+	margin-top: 12px;
+	padding: 15px 0;
+	border: 3px solid black;
+}
+.widgetMenuSlide li a {
+	font-family: tahoma;
+	padding: 2px 15px;
+	text-decoration: none;
+	width: 100%;
+	display: block;
+	font-weight: bold;
+}
+.widgetMenuSlide>ul>li>a {
+	color: rgb(136, 92,50);
+	font-size: 20px;
+}
+.widgetMenuSlide>ul>li>a:before {
+	content: '\e142 ';
+	font-family: 'Glyphicons Halflings';
+	font-size: 16px;
+	color: rgb(220,220,220);
+}
+.widgetMenuSlide>ul>ul>li>a {
+	color: rgb(100,50,20);
+	font-size: 18px;
+	background-color: rgb(240,193,123);
+	text-shadow: 1px 1px 2px white;
+	border-bottom: 2px solid rgb(20,20,20);
+}
+.widgetMenuSlide>ul>ul>li>a:hover {
+	color : rgb(0,0,0);
+}
+.widgetMenuSlide>ul ul {
+
+}
 header {
 	margin: 28px -10px 0 -10px;
 	height: 45px;
