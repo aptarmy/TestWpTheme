@@ -40,35 +40,34 @@ body {
 	border-radius: 20px;
 	margin-top: 12px;
 	padding: 15px 0;
-	border: 3px solid black;
+	border: 2px solid rgb(10,10,10);
 }
 .widgetMenuSlide li a {
-	font-family: tahoma;
 	padding: 2px 15px;
 	text-decoration: none;
 	width: 100%;
 	display: block;
-	font-weight: bold;
 }
 .widgetMenuSlide>ul>li>a {
-	color: rgb(136, 92,50);
-	font-size: 20px;
+	color: rgb(180,120,30);
+	font-size: 22px;
+	font-weight: bold;
+	margin-top:-5px;
 }
 .widgetMenuSlide>ul>li>a:before {
 	content: '\e142 ';
 	font-family: 'Glyphicons Halflings';
-	font-size: 16px;
-	color: rgb(220,220,220);
+	font-size: 15px;
+	color: rgb(180,180,180);
 }
 .widgetMenuSlide>ul>ul>li>a {
-	color: rgb(100,50,20);
+	color : rgb(20,140,100); /* เขียวแก่ */
+	background-color: rgb(10,10,10);
 	font-size: 18px;
-	background-color: rgb(240,193,123);
-	text-shadow: 1px 1px 2px white;
-	border-bottom: 2px solid rgb(20,20,20);
+	border-bottom: 2px solid rgb(40,40,40);
 }
 .widgetMenuSlide>ul>ul>li>a:hover {
-	color : rgb(0,0,0);
+	color: rgb(170,230,0); /* เขียวอ่อน */
 }
 .widgetMenuSlide>ul ul {
 
