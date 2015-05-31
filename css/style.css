@@ -1,0 +1,76 @@
+body {
+      margin:0;
+	background-image: url('../img/background.jpg');
+	background-size: cover;
+}	
+.logo {
+	margin: 0 20px 0 -10px;
+	width: 110%;
+}
+.sideBar {
+	margin: 5px -10px 0 5px;
+	height: 490px;
+	border-radius: 30px;
+	background-color: rgb(50,50,50);
+	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+}
+header {
+	margin: 28px -10px 0 -10px;
+	height: 45px;
+	border-radius: 20px;
+	background-color: rgb(0,110,0);
+	box-shadow: 0px 15px 20px 6px rgba(120, 200, 240, .3) inset;
+}
+header nav {
+	float: right;
+}
+header nav li {
+	float: left;
+	list-style: none;
+	margin: -15px 8px 0 0;
+}
+header nav li img {
+	height: 50px;
+}
+header .searchWrapper {
+	float: right;
+}
+header ul {
+	padding: 0;
+	margin-left: 10px;
+}
+header img {
+	height: 40px;
+	margin: 2px 0;
+	float: left;
+}
+header input[type=text] {
+	border: none;
+	border-radius: 20px;
+	font-size: 1.5em;
+	width: 150px;
+	height: 30px;
+	margin: 7px 0;
+	padding: 0 15px;
+	background-color: rgb(14, 58, 43);
+}
+.pageIcon {
+	margin: 4px 0 0 8px;
+	height: 36px;
+	float: left;
+}
+.pageTitle {
+	float: left;
+	color: white;
+	text-shadow: 1px 2px 0px black;
+	margin-left: 5px;
+	font-weight: bold;
+	font-size: 2.2em;
+}
+.contentWrapper {
+	background-color:  rgba(84, 139, 136, 0.15);
+	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
+	border-radius: 40px;
+	min-height: 550px;
+	margin-top: 25px;
+}
