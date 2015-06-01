@@ -1,12 +1,6 @@
-/*jQuery time*/
-$(document).ready(function(){
+(function($){
 	$("#accordian h3").click(function(){
-		//slide up all the link lists
-		$("#accordian ul ul").slideUp();
-		//slide down the link list below the h3 clicked - only if its closed
-		if(!$(this).next().is(":visible"))
-		{
-			$(this).next().slideDown();
-		}
-	})
-})
+		$("#accordian h3").siblings("ul").slideUp();
+		$(this).siblings("ul").slideDown();
+	});
+})(jQuery);
