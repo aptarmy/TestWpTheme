@@ -2,7 +2,7 @@ body {
       margin:0;
 	background-image: url('../img/background.jpg');
 	background-size: cover;
-}	
+}
 .logo {
 	margin: 0 20px 0 -10px;
 	width: 110%;
@@ -60,17 +60,17 @@ body {
 	font-size: 15px;
 	color: rgb(180,180,180);
 }
-.widgetMenuSlide>ul>ul>li>a {
+.widgetMenuSlide>ul>li>ul>li>a {
 	color : rgb(20,140,100); /* เขียวแก่ */
 	background-color: rgb(10,10,10);
 	font-size: 18px;
 	border-bottom: 2px solid rgb(40,40,40);
 }
-.widgetMenuSlide>ul>ul>li>a:hover {
+.widgetMenuSlide>ul>li>ul>li>a:hover {
 	color: rgb(170,230,0); /* เขียวอ่อน */
 }
 .widgetMenuSlide>ul ul {
-
+    display: none;
 }
 header {
 	margin: 28px -10px 0 -10px;
