@@ -9,6 +9,7 @@
 <body>
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
 <div class='container-fluid'>	<div class='row'>
+	<!-- Left column -->
 	<div class='col-md-3 hidden-sm hidden-xs'> <!-- ซ่อน col ซ้าย เมื่อหน้าจอเป็น Extra small : 768px -->
 		<img class='logo' src='img/news-logo.png'>
 		<aside class='barLeft'>
@@ -50,7 +51,9 @@
 			</div>
 		</aside>
 	</div>
+	<!-- Right column -->
 	<div class='col-md-9'>
+		<!-- Header -->
 		<header>
 			<img class='pageIcon' src='icons/green-circle.png'>
 			<div class='pageTitle'>News Express Online</div>
@@ -64,9 +67,12 @@
 			</ul></nav>
 			<div class='searchWrapper'><img src='icons/search.png'><input type='text'></div>
 		</header>
+		<!-- Running Text -->
 		<div class='runningText'><marquee direction="left"> ข้อความวิ่งจากขวาไปซ้าย ข้อความวิ่งจากขวาไปซ้าย ข้อความวิ่งจากขวาไปซ้าย ข้อความวิ่งจากขวาไปซ้าย ข้อความวิ่งจากขวาไปซ้าย ข้อความวิ่งจากขวาไปซ้าย</marquee></div>
+		<!-- content -->
 		<div class='contentWrapper'>
 			<div class='row'>
+				<!-- column slider and content -->
 				<div class='col-md-9'>
 					<div class='sliderWrapper'><!-- Height 600px -->
 						<div class='sliderImg' style='background-image:url(img/slider/img-1.jpg)'></div><!-- Height 500px -->
@@ -76,7 +82,7 @@
 								<div class='sliderThumb' style='background-image: url(img/slider/img-2.jpg)'></div>
 								<div class='sliderThumb' style='background-image: url(img/slider/img-3.jpg)'></div>
 								<div class='sliderThumb' style='background-image: url(img/slider/img-4.jpg)'></div>
-								<div class='sliderThumb'le style='background-image: url(img/slider/img-1.jpg)'></div>
+								<div class='sliderThumb' style='background-image: url(img/slider/img-1.jpg)'></div>
 								<div class='sliderThumb' style='background-image: url(img/slider/img-2.jpg)'></div>
 								<div class='sliderThumb' style='background-image: url(img/slider/img-3.jpg)'></div>
 								<div class='sliderThumb' style='background-image: url(img/slider/img-4.jpg)'></div>
@@ -90,10 +96,22 @@
 						</div>
 					</div>
 				</div>
+				<!-- Bar Right -->
 				<aside class='col-md-3'>
-					<div class='barRight'></div>
+					<div class='barRight'>
+						<div class='menuRight'><ul>
+							<li><a href="#">World</a></li>
+							<li><a href="#">Sport</a></li>
+							<li><a href="#">Technology</a></li>
+							<li><a href="#">Entertainment</a></li>
+							<li><a href="#">Travel</a></li>
+							<li><a href="#">Marketing</a></li>
+							<li><a href="#">Style</a></li>
+						</ul></div>
+					</div>
 				</aside>
 			</div>
+			<!-- Content under slider -->
 			<section class='content'></section>
 		</div>
 	</div>
