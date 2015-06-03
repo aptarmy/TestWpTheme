@@ -7,68 +7,63 @@ body {
 	margin: 0 20px 0 -10px;
 	width: 110%;
 }
-.sideBar {
+.barLeft {
 	margin: 5px -10px 0 5px;
 	height: 490px;
 	border-radius: 30px;
 	background-color: rgb(50,50,50);
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
 }
-.widgetMenuSlide {
+.menuLeft h2 {
+	color: rgb(240,230,10); /* เหลืองอ่อน */
+	margin:-10px 28px; 
+}
+.menuLeft {
 	padding: 12px;
 }
-.widgetMenuSlide h4 {
-	color: rgb(40,0,0);
-	width: 95%;
-	background-color: rgb(100,100,100);
-	text-align: center;
-	font-size: 26px;
-	font-weight: bold;
-	font-family: tahoma;
-	line-height: 40px;
-	text-shadow: 0px 1px 2px rgb(180,180,180);
-	border-radius: 20px;
-	box-shadow: 0px 2px 3px rgb(120, 120, 120) inset;
-	margin: 5px 5px 0 8px;
-}
-.widgetMenuSlide ul {
+.menuLeft ul {
 	padding: 0;
 	margin-top: 0;
 }
-.widgetMenuSlide>ul {
+.menuLeft>ul {
 	background-color: rgb(26,26,26);
 	border-radius: 20px;
+	margin-top: 2px;
 	padding: 15px 0;
 	border: 2px solid rgb(10,10,10);
 }
-.widgetMenuSlide li a {
+.menuLeft li a {
 	padding: 2px 15px;
 	text-decoration: none;
 	width: 100%;
 	display: block;
 }
-.widgetMenuSlide>ul>li>a {
-	color: rgb(180,120,30);
+.menuLeft>ul>li>a { /* Mainmenu Slide*/
+	color: rgb(200,200,180); /* ขาวซีด */
 	font-size: 22px;
-	font-weight: bold;
 	margin-top: -5px;
 }
-.widgetMenuSlide>ul>li>a:before {
-	content: '\e142 ';
-	font-family: 'Glyphicons Halflings';
-	font-size: 15px;
-	color: rgb(180,180,180);
+.menuLeft>ul>li>a:before {
+	content: '★';
+	font-size: 24px;
+	color:orange; /* ส้มสว่าง */
 }
-.widgetMenuSlide>ul>li>ul>li>a {
-	color : rgb(20,140,100); /* เขียวแก่ */
+.menuLeft>ul>li>ul>li>a:before {
+	content: '\e142';
+	font-family: 'Glyphicons Halflings';
+	font-size: 16px;
+	color:rgb(170,170,180); /* ขาวซีด */
+}
+.menuLeft>ul>li>ul>li>a {
+	color : rgb(20,180,100); /* เขียวแก่ */
 	background-color: rgb(10,10,10);
 	font-size: 18px;
 	border-bottom: 2px solid rgb(40,40,40);
 }
-.widgetMenuSlide>ul>li>ul>li>a:hover {
+.menuLeft>ul>li>ul>li>a:hover {
 	color: rgb(170,230,0); /* เขียวอ่อน */
 }
-.widgetMenuSlide>ul ul {
+.menuLeft>ul ul {
     display: none;
 }
 header {
@@ -84,7 +79,7 @@ header nav {
 header nav li {
 	float: left;
 	list-style: none;
-	margin: -15px 8px 0 0;
+	margin: -15px 6px 0 0;
 }
 header nav li img {
 	height: 50px;
@@ -111,6 +106,11 @@ header input[type=text] {
 	padding: 0 15px;
 	background-color: rgb(14, 58, 43);
 }
+.runningText marquee {
+	font-size: 1.5em;
+	color: pink;
+	text-shadow: 0px 1px 0px rgb(100,100,100);
+}
 .pageIcon {
 	margin: 4px 0 0 8px;
 	height: 36px;
@@ -125,9 +125,24 @@ header input[type=text] {
 	font-size: 2.2em;
 }
 .contentWrapper {
-	background-color:  rgba(84, 139, 136, 0.15);
+/*	background-color:  rgba(84, 139, 136, 0.15);
 	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-	border-radius: 40px;
-	min-height: 550px;
-	margin-top: 25px;
+	border-radius: 40px;*/
+	min-height: 700px;
+}
+.contentSlider {
+	margin: 0px -10px 0 -4px;
+	border-radius: 20px;
+	overflow: hidden;
+}
+.contentSlider .contentSliderImg {
+	width: 100%;
+	height: 100%;
+	background-size: cover;
+}
+.contentWrapper .barRight {
+	background-image: url(../img/wooden-bg.jpg);
+	background-size: cover;
+	height: 500px;
+	margin: 0 -5px 0 -10px;
 }
