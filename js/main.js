@@ -1,4 +1,10 @@
-$(".widgetMenuSlide > ul > li").click(function(){
-	$(".widgetMenuSlide > ul ul").not($(this).find("ul")).slideUp().end().find("a").click(function(e){e.stopPropagation();});
-	$(this).find("ul").slideToggle();
+$(document).ready(function(){
+	$(".menuLeft > ul > li").click(function(){
+		$(".menuLeft > ul ul").not($(this).find("ul")).slideUp().end().find("a").click(function(e){e.stopPropagation();});
+		$(this).find("ul").slideToggle();
+		return false;
+	});
+	$(".sliderControl-right").click(function(){$(".sliderThumbRow").css({"margin-left":"-395px"});});
+	$(".sliderControl-left").click(function(){$(".sliderThumbRow").css({"margin-left":"0px"});});
+	$(".sliderThumb").click(function(){$(".sliderImg").css({"background-image" : $(this).css("background-image")});});
 });
