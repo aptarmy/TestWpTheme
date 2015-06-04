@@ -12,13 +12,16 @@ body {
 	border-radius: 30px;
 	background-color: rgb(50,50,50);
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
+	padding: 12px;
+}
+.menuLeft {
+	padding-top: -7px;
 }
 .menuLeft h2 {
 	color: rgb(240,230,10); /* เหลืองอ่อน */
-	margin:-10px 28px;
-}
-.menuLeft {
-	padding: 12px;
+	text-align: center;
+	padding: 0;
+	margin: -7px;
 }
 .menuLeft ul {
 	padding: 0;
@@ -30,8 +33,8 @@ body {
 .menuLeft>ul {
 	background-color: rgb(26,26,26);
 	border-radius: 20px;
-	margin-top: 2px;
-	padding: 15px 0;
+	margin: 2px 0;
+	padding: 15px 0 9px 0;
 	border: 2px solid rgb(10,10,10);
 }
 .menuLeft li a {
@@ -134,26 +137,28 @@ header input[type=text] {
 }
 .sliderWrapper {
 	margin: 0px -10px 0 -4px;
-    height: 550px;
-    background-color: black;
-    position: relative;
+	height: 530px;
+	position: relative;
 }
 .sliderImg {
 	width: 100%;
-	height: 450px;
+	height: 470px;
 	background-size: cover;
-    background-position: center;
+	background-position: center;
 }
 .sliderThumbWrapper {
     width: 100%;
     overflow: hidden;
+    background-color: black;
+    margin-top: 5px;
 }
 .sliderThumbRow {
-    height: 100px;
-    width: 1110px;
-    padding: 10px 5px;
+    height: 120px;
+    width: 1410px;
+    padding: 20px 5px;
     transition: margin 0.5s ease;
-    background-image: url(../img/film-bg.jpg);
+    background-image: url(../icons/film.png);
+    background-size
 }
 .sliderThumbRow:before, .sliderThumbRow:after{
     content: " ";
@@ -195,10 +200,10 @@ header input[type=text] {
 	background-size: cover;
 	height: 550px;
 	margin: 0 -5px 0 -10px;
-    padding: 15px;
+	padding: 12px 20px;
 }
 .barRight ul {
-    margin: 0px;
+    margin-top: -30px;
     padding: 0px;
 }
 .barRight li {
@@ -208,18 +213,19 @@ header input[type=text] {
     padding: 0;
 }
 .barRight li a {
-    color: white;
+    color: yellow;
     text-decoration: none;
     display: inline-block;
     text-align: center;
     width: 100%;
     padding: 10px 0;
-    margin: 10px 0 0 0;
-    background-color: rgb(70, 175, 70);
+    margin: 8px 0 0 0;
     border-radius: 30px;
-    box-shadow: 0px -4px 0px rgb(30, 140, 30) inset;
+    background-color: rgb(40, 40, 40);
+    box-shadow: 0px 5px 15px rgb(0, 0, 0) inset, 0px 1px 0pc white;
 }
 .barRight li a:hover {
-    background-color: rgb(45, 120, 45);
-    box-shadow: 0px 5px 15px rgb(20, 45, 20) inset, 0px 1px 0pc white;
+    color: white;
+    background-color: rgb(80, 20, 0);
+    box-shadow: 0px 5px 15px rgb(20, 45, 20)  inset, 0px 1px 0pc black;
 }
