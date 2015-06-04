@@ -130,43 +130,35 @@ header input[type=text] {
 	font-size: 2.2em;
 }
 .contentWrapper {
-/*	background-color:  rgba(84, 139, 136, 0.15);
-	box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.3);
-	border-radius: 40px;*/
 	min-height: 650px;
 }
 .sliderWrapper {
 	margin: 0px -10px 0 -4px;
-	height: 530px;
+	height: 550px;
 	position: relative;
 }
 .sliderImg {
 	width: 100%;
-	height: 470px;
+	height: 425px;
 	background-size: cover;
 	background-position: center;
 }
 .sliderThumbWrapper {
+    height: 120px;
     width: 100%;
     overflow: hidden;
     background-color: black;
     margin-top: 5px;
-}
-.sliderThumbRow {
-    height: 120px;
-    width: 1410px;
-    padding: 20px 5px;
-    transition: margin 0.5s ease;
     background-image: url(../icons/film.png);
-    background-size
+    padding: 20px 0;
 }
-.sliderThumbRow:before, .sliderThumbRow:after{
+.sliderThumbWrapper:before, .sliderThumbWrapper:after{
     content: " ";
     display: table;
     clear: both;
 }
 .sliderThumb {
-    width: 100px;
+    width: 132.8px;
     height: 80px;
     margin: 0 5px;
     float: left;
