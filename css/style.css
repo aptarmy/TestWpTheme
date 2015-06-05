@@ -32,11 +32,11 @@ body {
     padding: 10px 0;
     border: 2px solid rgb(10,10,10);
 }
-.menuLeft h2 {
+.menuLeftWrapper h2 {
 	color: rgb(240,230,10); /* เหลืองอ่อน */
 	text-align: center;
 	padding: 0;
-	margin: 0 0 15px;
+	margin: 0 0 -5px;
 }
 .menuLeft ul {
 	padding: 0;
@@ -165,8 +165,21 @@ header nav li img:hover {
 .sliderImg {
 	width: 100%;
 	height: 425px;
+    position: relative;
 	background-size: cover;
 	background-position: center;
+}
+.sliderTitle {
+    position: absolute; /* Relative to sliderImg */
+    left: 0px;
+    right: 0px;
+    bottom: 0px;
+    height: 60px;
+    color: white;
+    font-size: 30px;
+    text-shadow: 0px 0px 5px black;
+    padding: 15px 15px 0px;
+    background-image: -webkit-linear-gradient(top, rgba(0, 0, 0, 0.1), rgba(0, 0, 0, 0.8));
 }
 .sliderThumbWrapper {
     height: 120px;
