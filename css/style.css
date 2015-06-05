@@ -19,7 +19,7 @@ body {
 .logo {
 	max-width: 100%;
 }
-.barLeft {
+.menuLeftWrapper {
 	border-radius: 30px;
 	background-color: rgb(50,50,50);
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
@@ -80,12 +80,12 @@ body {
     display: none;
 }
 .adsWidget {
-    height: 400px;
-    width: 240px;
-    margin: 15px auto 0;
-    background-image: url(../img/ads-240x400.gif);
+    width: 300px;
+    height: 600px;
+    margin: 10px auto 0;
+    background-image: url(../img/ads-300x600.png);
 }
-@media (max-width: 1130px) {
+@media (max-width: 1250px) {
     .adsWidget { display: none }
 }
 header {
@@ -98,6 +98,10 @@ header {
 header nav {
 	float: right;
 }
+header nav ul {
+	padding: 0;
+	margin-left: 10px;
+}
 header nav li {
 	float: left;
 	list-style: none;
@@ -105,20 +109,20 @@ header nav li {
 }
 header nav li img {
 	height: 50px;
+    opacity: 0.5;
 }
-header .searchWrapper {
+header nav li img:hover {
+    opacity: 1;
+}
+.searchWrapper {
 	float: right;
 }
-header ul {
-	padding: 0;
-	margin-left: 10px;
-}
-header img {
+.searchWrapper img {
 	height: 40px;
 	margin: 2px 0;
 	float: left;
 }
-header input[type=text] {
+.searchWrapper input[type=text] {
 	border: none;
 	border-radius: 20px;
 	font-size: 1.5em;
@@ -127,6 +131,10 @@ header input[type=text] {
 	margin: 7px 0;
 	padding: 0 15px;
 	background-color: rgb(14, 58, 43);
+    color: white;
+}
+.searchWrapper input[type=text]:focus {
+    outline: none;
 }
 .runningText marquee {
 	font-size: 1.5em;
