@@ -32,11 +32,11 @@ body {
     padding: 10px 0;
     border: 2px solid rgb(10,10,10);
 }
-.menuLeft h2 {
+.menuLeftWrapper h2 {
 	color: rgb(240,230,10); /* เหลืองอ่อน */
 	text-align: center;
 	padding: 0;
-	margin: 0 0 15px;
+	margin: 0 0 -5px;
 }
 .menuLeft ul {
 	padding: 0;
