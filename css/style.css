@@ -264,9 +264,6 @@ section {
 /* Category */
 .showPost {
 	min-height: 550px;
-	border-radius: 20px;
-	background-color: rgba(170,170,170,0.2);
-	padding: 10px;
 }
 .post {
 	height: 200px;
