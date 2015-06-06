@@ -1,0 +1,31 @@
+header {
+    overflow: hidden;
+}
+header nav {
+    position: fixed;
+    width: 100px;
+    height: 100%;
+    z-index: 100;
+    top: 0px;
+    right: -100px;
+    background-color: whitesmoke;
+    box-shadow: 0px 0px 10px black;
+}
+header nav.expand {
+    right: 0px;
+}
+header nav ul {
+    margin: 0;
+    padding: 7px 0;
+}
+header nav li {
+    float: none;
+    margin: 0;
+    padding: 7px 15px;
+}
+header .searchWrapper {
+    display: none;
+}
+header .collapseBtn {
+    display: block;
+}
