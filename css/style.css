@@ -183,17 +183,27 @@ header nav li img:hover {
 	background-position: center;
 }
 .sliderTitle {
-    position: absolute; /* Relative to sliderImg */
-    left: 0px;
-    right: 0px;
-    bottom: 0px;
-    height: 60px;
-    color: white;
-    font-size: 30px;
-    line-height: 60px;
-    padding: 0 15px;
-    text-shadow: 0px 0px 5px black;
-    background-color: rgba(0,0,0,0.5);
+	position: absolute; /* Relative to sliderImg */
+	left: 0px;
+	right: 0px;
+	bottom: 0px;
+	font-size: 30px;
+	line-height: 34px;
+	padding: 5px 15px;
+	text-shadow: 0px 1px 0px white;
+	background-color: rgba(255,255,255,0.5);
+}
+.sliderTitle a {
+	font-weight:bold;
+	color: rgb(0,20,0);
+}
+.sliderTitle:before {
+	font-family: 'Glyphicons Halflings';
+	color:rgb(255,0,100);
+	content: '\e104';
+	display: inline-block;
+	margin-right: 5px;
+	 vertical-align: bottom;
 }
 .sliderThumbWrapper {
     height: 120px;
@@ -281,28 +291,33 @@ section {
 	position: relative;
 }
 .post {
-	height: 200px;
+	height: 250px;
 	background-size: cover;
 	background-position: center;
 	margin-bottom: 10px;
-    position: relative;
-    cursor: pointer;
+	position: relative;
+	cursor: pointer;
+	-webkit-transition: -webkit-filter 0.2s ease;
+}
+.post:hover {
+	-webkit-filter: brightness(1.2);
+}
+.post:hover .postTitle{
+	background-color: rgba(255,255,255,0.7);
 }
 .postTitle {
-    position: absolute;
-    bottom: 0px;
-    left: 0px;
-    right: 0px;
-    height: 30px;
-    line-height: 30px;
-    font-size: 20px;
-    padding: 0 15px;
-    text-shadow: 0px 0px 2px black;
-    background-color: rgba(0,0,0,0.5);
-    transition: all 0.2 ease;
+	position: absolute;
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	height: 30px;
+	line-height: 30px;
+	font-size: 20px;
+	padding: 0 15px;
+	background-color: rgba(255,255,255,0.5);
 }
 .postTitle a {
-    color: white;
+    color: rgb(0,20,0);
 }
 .post.expandPost {
     position: absolute;

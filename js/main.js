@@ -10,7 +10,7 @@ $(document).ready(function(){
 	/* slide show */
 	$(".sliderThumb").click(function(){
 		$(".sliderImg").css({"background-image" : $(this).css("background-image")});
-		$(".sliderTitle").text($(this).data("title"));
+		$(".sliderTitle a").text($(this).data("title"));
 	});
 
 	/* show post in category */
