@@ -2,7 +2,7 @@
 .container-fluid {
     padding: 0 10px;
 }
-.col-md-3, .col-md-9, .col-md-4 {
+.col-md-3, .col-md-9, .col-md-4, .col-md-6 {
     padding: 0 5px;
 }
 .row {
@@ -80,10 +80,10 @@ body {
     display: none;
 }
 .adsWidget {
-    width: 300px;
-    height: 600px;
     margin: 10px auto 0;
-    background-image: url(../img/ads-300x600.png);
+}
+.adsWidget img {
+    width: 100%;
 }
 header {
     margin-top: 20px;
@@ -297,10 +297,12 @@ section {
     line-height: 30px;
     font-size: 20px;
     padding: 0 15px;
-    color: white;
+    text-shadow: 0px 0px 2px black;
     background-color: rgba(0,0,0,0.5);
-    cursor: pointer;
     transition: all 0.2 ease;
+}
+.postTitle a {
+    color: white;
 }
 .post.expandPost {
     position: absolute;
@@ -309,4 +311,9 @@ section {
     height: 100%;
     width: 100%;
     z-index: 50;
+}
+.post.expandPost .postTitle  {
+    height: 50px;
+    line-height: 50px;
+    font-size: 35px;
 }
