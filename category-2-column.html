@@ -7,12 +7,14 @@
 <link href='css/bootstrap.css' rel='stylesheet'>
 <link href='css/style.css' rel='stylesheet'>
 <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1270px)">
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:991px)">
 </head>
 <body>
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
 <div class='container-fluid'>	<div class='row'>
 	<!-- Right column -->
 	<div class='col-md-10'>
+		<div class='rightCol'>
 			<!-- Logo & Ads -->
 			<div class='row'>
 				<div class='col-md-2'><img class='logo' src='img/news-logo.png'></div>
@@ -23,17 +25,23 @@
 				<div class='row pos-static'>
 					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-1.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 1</a></div></div></div>
 					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-2.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 2</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-4.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 4</a></div></div></div>
+					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 3</a></div></div></div>
 				</div>
 				<div class='row pos-static'>
+					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 4</a></div></div></div>
+					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-4.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 5</a></div></div></div>
+					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-5.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 6</a></div></div></div>
+				</div>
+				<div class='row pos-static'>
+					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-1.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 1</a></div></div></div>
+					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-2.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 2</a></div></div></div>
 					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 3</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-4.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 4</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-4.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 4</a></div></div></div>
 				</div>
 			</div>
+		</div>
 	</div>
-	<div class='col-md-2 barRightWrapper'>
-		<div class='barRight' style='position:absolute;top:0px;right:5px;left:5px'>
+	<div class='col-md-2'>
+		<div class='barRight'>
 			<div class='backBtn'><a href='index.html'>Home</a></div>
 			<div class='menuRight'><ul>
 				<li><a href="#">World</a></li>
@@ -56,22 +64,24 @@
 	/* Fix rightBar position */
 	jQuery("document").ready(function(){
 		(function($){
-			$(window).scroll(function(){
-				if($(window).width() >= 1270){
+			function calFixScroll(){
+				$(".barRight").css({"margin-top":"0px"});
+				if($(window).width() > 767){
 					var barRightH = $(".barRight").outerHeight();
 					var winH = $(window).height();
 					var winTop = $(window).scrollTop();
 					var docH = $(document).height();
-					$(".barRightWrapper").css({"height": docH+"px"});
-					if ( (winTop > 0) && ((winTop+barRightH) > (winTop + winH)) && ((winTop+barRightH) < docH) ) {
-						$(".barRight").css({"top": winTop+"px"});
+					if ( (winTop > 0) && ((winTop+barRightH) < docH) ) {
+						$(".barRight").css({"margin-top": winTop+"px"});
 					}else if( (winTop > 0) && ((winTop+barRightH) > docH) ){
-						$(".barRight").css({"bottom":"0px", "top":""});
+						$(".barRight").css({"margin-top": (docH+barRightH)+"px"});
 					}else if((winTop == 0)){
-						$(".barRight").css({"top":"0px", "bottom":""});
+						$(".barRight").css({"margin-top":"0px"});
 					}
 				}
-			});
+			}
+			$(window).scroll(function(){ calFixScroll() });
+			$(window).resize(function(){ calFixScroll() });
 		})(jQuery);
 	});
 </script>
