@@ -21,5 +21,5 @@ $(document).ready(function(){
 	/* collapse button */
 	$(".collapseBtn").click(function(){$("header").find("nav").addClass("expand");});
 	$("header").find("nav").mouseleave(function(){ $(this).removeClass("expand").removeClass("expand"); });
-
+	
 });

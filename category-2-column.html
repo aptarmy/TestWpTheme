@@ -13,8 +13,11 @@
 <div class='container-fluid'>	<div class='row'>
 	<!-- Right column -->
 	<div class='col-md-10'>
-		<!-- Slider & RightMenu -->
-		<div class='contentWrapper'>
+			<!-- Logo & Ads -->
+			<div class='row'>
+				<div class='col-md-2'><img class='logo' src='img/news-logo.png'></div>
+				<div class='col-md-10'><div class='adsWidget'><img src='img/ads-728x90.jpg'></div></div>
+			</div>
 			<!-- Show 6 posts -->
 			<div class='showPost'>
 				<div class='row pos-static'>
@@ -28,10 +31,10 @@
 					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-4.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 4</a></div></div></div>
 				</div>
 			</div>
-		</div>
 	</div>
-	<div class='col-md-2'>
-		<div class='barRight'>
+	<div class='col-md-2 barRightWrapper'>
+		<div class='barRight' style='position:absolute;top:0px;right:5px;left:5px'>
+			<div class='backBtn'><a href='index.html'>Home</a></div>
 			<div class='menuRight'><ul>
 				<li><a href="#">World</a></li>
 				<li><a href="#">Sport</a></li>
@@ -49,5 +52,28 @@
 <script src='js/lib/angular-ui-router.js'></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
 <script src='js/main.js'></script>
+<script>
+	/* Fix rightBar position */
+	jQuery("document").ready(function(){
+		(function($){
+			$(window).scroll(function(){
+				if($(window).width() >= 1270){
+					var barRightH = $(".barRight").outerHeight();
+					var winH = $(window).height();
+					var winTop = $(window).scrollTop();
+					var docH = $(document).height();
+					$(".barRightWrapper").css({"height": docH+"px"});
+					if ( (winTop > 0) && ((winTop+barRightH) > (winTop + winH)) && ((winTop+barRightH) < docH) ) {
+						$(".barRight").css({"top": winTop+"px"});
+					}else if( (winTop > 0) && ((winTop+barRightH) > docH) ){
+						$(".barRight").css({"bottom":"0px", "top":""});
+					}else if((winTop == 0)){
+						$(".barRight").css({"top":"0px", "bottom":""});
+					}
+				}
+			});
+		})(jQuery);
+	});
+</script>
 </body>
 </html>
