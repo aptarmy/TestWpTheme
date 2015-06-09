@@ -13,13 +13,8 @@ $(document).ready(function(){
 		$(".sliderTitle a").text($(this).data("title"));
 	});
 
-	/* show post in category */
-	$(".post").click(function(){
-		$(this).toggleClass("expandPost");
-	});
-
 	/* collapse button */
 	$(".collapseBtn").click(function(){$("header").find("nav").addClass("expand");});
 	$("header").find("nav").mouseleave(function(){ $(this).removeClass("expand").removeClass("expand"); });
-	
+
 });

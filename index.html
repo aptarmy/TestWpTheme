@@ -63,12 +63,12 @@
 			<img class='pageIcon' src='icons/green-circle.png'>
 			<div class='pageTitle'>News Express Online</div>
 			<nav><ul>
-				<li><a href='#'><img src='icons/home.png'></a></li>
-				<li><a href='#'><img src='icons/bonus.png'></a></li>
-				<li><a href='#'><img src='icons/star.png'></a></li>
-				<li><a href='#'><img src='icons/organic.png'></a></li>
-				<li><a href='#'><img src='icons/help.png'></a></li>
-				<li><a href='#'><img src='icons/mail.png'></a></li>
+				<li><a href='#home'><img src='icons/home.png' class='highlight'></a></li>
+				<li><a href='#page/free'><img src='icons/bonus.png'></a></li>
+				<li><a href='#page/star'><img src='icons/star.png'></a></li>
+				<li><a href='#page/organic'><img src='icons/organic.png'></a></li>
+				<li><a href='#page/ring'><img src='icons/help.png'></a></li>
+				<li><a href='#page/mail'><img src='icons/mail.png'></a></li>
 			</ul></nav>
 			<div class='collapseBtn'><span class='glyphicon glyphicon-menu-hamburger'></span></div>
 			<div class='searchWrapper'><img src='icons/search.png'><input type='text'></div>
@@ -76,7 +76,7 @@
 		<!-- Running Text -->
 		<div class='runningText'><marquee direction="left"> ข่าวด่วนจี๋!!! ... ตกตะลึง ... พบตัวดุ๊กดิ๊กที่ป่าชายเลนสถานตากอากาศบางปู ลักษณะคล้ายปลาตีน แต่ตัวใหญ่เท่าช้าง คนแห่กันมาดู ทำเอารถติดยาวววว... ไปจนถึงซีคอนสแควร์ </marquee></div>
 		<!-- Slider & RightMenu -->
-		<div class='contentWrapper'>
+		<div class='mainArea'>
 			<div class='row'>
 				<!-- column slider and content -->
 				<div class='col-md-9'>
@@ -115,7 +115,28 @@
 			</div>
 		</div>
 		<!-- Content under slider -->
-		<section>Content</section>
+		<section class='pageSlide'>
+			<article class='page' style='background-color:whitesmoke'>
+				<a href='page/free' style='color:gray;text-decoration:none;text-align:center;'><h2 style='font-size: 100px;'>Free</h2></a>
+				<p style='font-size:50px;text-align:center;color:darkgray'>content content</p>
+			</article>
+			<article class='page' style='background-color:whitesmoke'>
+				<a href='page/star' style='color:gray;text-decoration:none;text-align:center;'><h2 style='font-size: 100px;'>Star</h2></a>
+				<p style='font-size:50px;text-align:center;color:darkgray'>content content</p>
+			</article>
+			<article class='page' style='background-color:whitesmoke'>
+				<a href='page/organic' style='color:gray;text-decoration:none;text-align:center;'><h2 style='font-size: 100px;'>100% Organic</h2></a>
+				<p style='font-size:50px;text-align:center;color:darkgray'>content content</p>
+			</article>
+			<article class='page' style='background-color:whitesmoke'>
+				<a href='page/ring' style='color:gray;text-decoration:none;text-align:center;'><h2 style='font-size: 100px;'>Ring</h2></a>
+				<p style='font-size:50px;text-align:center;color:darkgray'>content content</p>
+			</article>
+			<article class='page' style='background-color:whitesmoke'>
+				<a href='page/mail' style='color:gray;text-decoration:none;text-align:center;'><h2 style='font-size: 100px;'>Mail</h2></a>
+				<p style='font-size:50px;text-align:center;color:darkgray'>content content</p>
+			</article>
+		</section>
 	</div>
 </div> </div>
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
@@ -123,5 +144,26 @@
 <script src='js/lib/angular-ui-router.js'></script>
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
 <script src='js/main.js'></script>
+<script type="text/javascript">
+	(function($){
+		$(document).ready(function(){
+			var currentPage = "home";
+			$("header nav").find("a").click(function(){
+				var href = $(this).attr("href").replace("#","");
+				if(currentPage === href){ return false; }
+				$("section.pageSlide").find("article.page").slideUp();
+				if (href != "home"){
+					$(".mainArea").slideUp();
+					$("section.pageSlide").find("a[href='"+href+"']").closest("article.page").slideDown();
+				} else {
+					$(".mainArea").slideDown();
+				}
+				currentPage = href;
+				$("header nav li").find("img").removeClass("highlight");
+				$(this).find("img").addClass("highlight");
+			});
+		});
+	})(jQuery);
+</script>
 </body>
 </html>

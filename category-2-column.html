@@ -14,31 +14,30 @@
 <div class='container-fluid'>	<div class='row'>
 	<!-- Right column -->
 	<div class='col-md-10'>
-		<div class='rightCol'>
-			<!-- Logo & Ads -->
-			<div class='row'>
-				<div class='col-md-2'><img class='logo' src='img/news-logo.png'></div>
-				<div class='col-md-10'><div class='adsWidget'><img src='img/ads-728x90.jpg'></div></div>
+		<!-- Logo & Ads -->
+		<div class='row'>
+			<div class='col-md-2'><img class='logo' src='img/news-logo.png'></div>
+			<div class='col-md-10'><div class='adsWidget'><img src='img/ads-728x90.jpg'></div></div>
+		</div>
+		<!-- Show 6 posts -->
+		<div class='posts'>
+			<div class='row pos-static'>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-1.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 1</a></div></div></div>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-2.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 2</a></div></div></div>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 3</a></div></div></div>
 			</div>
-			<!-- Show 6 posts -->
-			<div class='showPost'>
-				<div class='row pos-static'>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-1.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 1</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-2.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 2</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 3</a></div></div></div>
-				</div>
-				<div class='row pos-static'>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 4</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-4.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 5</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-5.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 6</a></div></div></div>
-				</div>
-				<div class='row pos-static'>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-1.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 1</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-2.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 2</a></div></div></div>
-					<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 3</a></div></div></div>
-				</div>
+			<div class='row pos-static'>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 4</a></div></div></div>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-4.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 5</a></div></div></div>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-5.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 6</a></div></div></div>
+			</div>
+			<div class='row pos-static'>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-1.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 1</a></div></div></div>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-2.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 2</a></div></div></div>
+				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 3</a></div></div></div>
 			</div>
 		</div>
+		<div class='showFullImgWrapper'><div class='showFullImg'><img src=''></div></div>
 	</div>
 	<div class='col-md-2'>
 		<div class='barRight'>
@@ -61,20 +60,20 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
 <script src='js/main.js'></script>
 <script>
-	/* Fix rightBar position */
 	jQuery("document").ready(function(){
+		/* Fix rightBar position */
 		(function($){
 			function calFixScroll(){
 				$(".barRight").css({"margin-top":"0px"});
 				if($(window).width() > 767){
-					var barRightH = $(".barRight").outerHeight();
+					var barRightH = $(".barRight").height();
 					var winH = $(window).height();
 					var winTop = $(window).scrollTop();
 					var docH = $(document).height();
 					if ( (winTop > 0) && ((winTop+barRightH) < docH) ) {
 						$(".barRight").css({"margin-top": winTop+"px"});
 					}else if( (winTop > 0) && ((winTop+barRightH) > docH) ){
-						$(".barRight").css({"margin-top": (docH+barRightH)+"px"});
+						$(".barRight").css({"margin-top": (docH-barRightH)+"px"});
 					}else if((winTop == 0)){
 						$(".barRight").css({"margin-top":"0px"});
 					}
@@ -82,6 +81,29 @@
 			}
 			$(window).scroll(function(){ calFixScroll() });
 			$(window).resize(function(){ calFixScroll() });
+		})(jQuery);
+		/* Show Full image */
+		(function($){
+			$(".post").click(function(){
+				var $showFullImg = $(".showFullImg");
+				var $img = $showFullImg.find("img");
+				var bgAttr = $(this).css("background-image");
+				var bgUrl = bgAttr.slice(4,-1);
+				$img.css({"height":"", "width":""});
+				$img.attr("src", bgUrl);
+				$img.load(function(){
+					$(".showFullImgWrapper").fadeIn();
+					var showFullImgH = $showFullImg.height();
+					var imgH = $img.height();
+					console.log(showFullImgH, imgH);
+					if(imgH > (showFullImgH)){
+						$img.css({"height":"100%", "width":"auto"});
+					}
+				});
+			});
+			$(".showFullImgWrapper").click(function(){
+				$(this).fadeOut();
+			});
 		})(jQuery);
 	});
 </script>
