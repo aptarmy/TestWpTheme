@@ -37,7 +37,11 @@
 				<div class='col-md-4 pos-static'><div class='post' style='background-image:url(img/post/post-3.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 3</a></div></div></div>
 			</div>
 		</div>
-		<div class='showFullImgWrapper'><div class='showFullImg'><img src=''></div></div>
+		<div class='showFullImgWrapper'>
+			<div class='tb'><div class='tb-cell'>
+				<div class='showFullImg'><img src=''></div>
+			</div></div>
+		</div>
 	</div>
 	<div class='col-md-2'>
 		<div class='barRight'>
@@ -102,7 +106,9 @@
 				});
 			});
 			$(".showFullImgWrapper").click(function(){
-				$(this).fadeOut();
+				$(this).fadeOut(function(){
+					$(".showFullImg").find("img").attr("src", "");
+				});
 			});
 		})(jQuery);
 	});
