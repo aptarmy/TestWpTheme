@@ -38,9 +38,7 @@
 			</div>
 		</div>
 		<div class='showFullImgWrapper'>
-			<div class='tb'><div class='tb-cell'>
-				<div class='showFullImg'><img src=''></div>
-			</div></div>
+			<div class='showFullImg'><img src=''></div>
 		</div>
 	</div>
 	<div class='col-md-2'>
@@ -67,21 +65,21 @@
 	jQuery("document").ready(function(){
 		/* Fix rightBar position */
 		(function($){
-			function calFixScroll(){
-				$(".barRight").css({"margin-top":"0px"});
-				if($(window).width() > 767){
-					var barRightH = $(".barRight").height();
-					var winH = $(window).height();
-					var winTop = $(window).scrollTop();
-					var docH = $(document).height();
-					if ( (winTop > 0) && ((winTop+barRightH) < docH) ) {
-						$(".barRight").css({"margin-top": winTop+"px"});
-					}else if( (winTop > 0) && ((winTop+barRightH) > docH) ){
-						$(".barRight").css({"margin-top": (docH-barRightH)+"px"});
-					}else if((winTop == 0)){
-						$(".barRight").css({"margin-top":"0px"});
-					}
-				}
+			 function calFixScroll(){
+			// 	$(".barRight").css({"margin-top":"0px"});
+			// 	if($(window).width() > 767){
+			// 		var barRightH = $(".barRight").height();
+			// 		var winH = $(window).height();
+			 		var winTop = $(window).scrollTop();
+			// 		var docH = $(document).height();
+			// 		if ( (winTop > 0) && ((winTop+barRightH) < docH) ) {
+			 			$(".barRight").css({"margin-top": winTop+"px"});
+			// 		}else if( (winTop > 0) && ((winTop+barRightH) > docH) ){
+			// 			$(".barRight").css({"margin-top": (docH-barRightH)+"px"});
+			// 		}else if((winTop == 0)){
+			// 			$(".barRight").css({"margin-top":"0px"});
+			// 		}
+			// 	}
 			}
 			$(window).scroll(function(){ calFixScroll() });
 			$(window).resize(function(){ calFixScroll() });
@@ -89,6 +87,7 @@
 		/* Show Full image */
 		(function($){
 			$(".post").click(function(){
+				var winH = $(window).height();
 				var $showFullImg = $(".showFullImg");
 				var $img = $showFullImg.find("img");
 				var bgAttr = $(this).css("background-image");
@@ -99,10 +98,10 @@
 					$(".showFullImgWrapper").fadeIn();
 					var showFullImgH = $showFullImg.height();
 					var imgH = $img.height();
-					console.log(showFullImgH, imgH);
 					if(imgH > (showFullImgH)){
 						$img.css({"height":"100%", "width":"auto"});
 					}
+					$showFullImg.css({"margin-top": ((winH-showFullImgH)/2)+"px"});
 				});
 			});
 			$(".showFullImgWrapper").click(function(){
