@@ -14,7 +14,7 @@
 <div class='container-fluid'>	<div class='row'>
 	<!-- Left column -->
 	<div class='col-md-3 hidden-sm hidden-xs'> <!-- ซ่อน col ซ้าย เมื่อหน้าจอเป็น Extra small : 768px -->
-		<img class='logo' src='img/news-logo.png'>
+		<img class='logo' src='img/news-logo.png' height='165'>
 		<aside class='barLeft'>
 			<div class='menuLeftWrapper'>
 				<h2 class='topNew'>Tag Hot Issue</h2>
@@ -146,25 +146,31 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
 <script src='js/main.js'></script>
 <script type="text/javascript">
+jQuery(document).ready(function(){
+	// Slider page on top menu
 	(function($){
-		$(document).ready(function(){
-			var currentPage = "home";
-			$("header nav").find("a").click(function(){
-				var href = $(this).attr("href").replace("#","");
-				if(currentPage === href){ return false; }
-				$("section.pageSlide").find("article.page").slideUp();
-				if (href != "home"){
-					$(".mainArea").slideUp();
-					$("section.pageSlide").find("a[href='"+href+"']").closest("article.page").slideDown();
-				} else {
-					$(".mainArea").slideDown();
-				}
-				currentPage = href;
-				$("header nav li").find("img").removeClass("highlight");
-				$(this).find("img").addClass("highlight");
-			});
+		var currentPage = "home";
+		$("header nav").find("a").click(function(){
+			var href = $(this).attr("href").replace("#","");
+			if(currentPage === href){ return false; }
+			$("section.pageSlide").find("article.page").slideUp();
+			if (href != "home"){
+				$(".mainArea").slideUp();
+				$("section.pageSlide").find("a[href='"+href+"']").closest("article.page").slideDown();
+			} else {
+				$(".mainArea").slideDown();
+			}
+			currentPage = href;
+			$("header nav li").find("img").removeClass("highlight");
+			$(this).find("img").addClass("highlight");
 		});
 	})(jQuery);
+
+	// Define height of berRight
+	(function($){
+		$(".menuRight").css({"height": $(".sliderWrapper").height()+"px"});
+	})(jQuery);
+});
 </script>
 </body>
 </html>

@@ -65,24 +65,10 @@
 	jQuery("document").ready(function(){
 		/* Fix rightBar position */
 		(function($){
-			 function calFixScroll(){
-			// 	$(".barRight").css({"margin-top":"0px"});
-			// 	if($(window).width() > 767){
-			// 		var barRightH = $(".barRight").height();
-			// 		var winH = $(window).height();
-			 		var winTop = $(window).scrollTop();
-			// 		var docH = $(document).height();
-			// 		if ( (winTop > 0) && ((winTop+barRightH) < docH) ) {
-			 			$(".barRight").css({"margin-top": winTop+"px"});
-			// 		}else if( (winTop > 0) && ((winTop+barRightH) > docH) ){
-			// 			$(".barRight").css({"margin-top": (docH-barRightH)+"px"});
-			// 		}else if((winTop == 0)){
-			// 			$(".barRight").css({"margin-top":"0px"});
-			// 		}
-			// 	}
-			}
-			$(window).scroll(function(){ calFixScroll() });
-			$(window).resize(function(){ calFixScroll() });
+			/* Define .menuRight after page is loaded completely */
+			$(".menuRight").css({"height": ($(window).height()-$(".menuRight").offset().top - 10)+"px"});
+			/* use margin-top to make .barRight acts as if it is fixed instead of position:fixed */
+			$(window).scroll(function(){ $(".barRight").css({"margin-top": $(window).scrollTop()+"px"});});
 		})(jQuery);
 		/* Show Full image */
 		(function($){
