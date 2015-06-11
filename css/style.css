@@ -296,7 +296,11 @@ header nav li img.highlight {
 .pos-absolute {
     position: absolute;
 }
-
+.col-v-center {
+    display: inline-block !important;
+    float: none !important;
+    vertical-align: middle;
+}
 /* Post */
 .content {
 	margin-top: 10px;
