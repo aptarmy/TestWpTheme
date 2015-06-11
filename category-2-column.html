@@ -16,7 +16,9 @@
 	<div class='col-md-10'>
 		<!-- Logo & Ads -->
 		<div class='row'>
-			<div class='col-md-2'><img class='logo' src='img/news-logo.png'></div>
+			<div class='col-md-2'>
+				<img class='logo' src='img/news-logo.png' style='max-height:119px;'>
+			</div>
 			<div class='col-md-10'><div class='adsWidget'><img src='img/ads-728x90.jpg'></div></div>
 		</div>
 		<!-- Show 6 posts -->
@@ -68,7 +70,9 @@
 			/* Define .menuRight after page is loaded completely */
 			$(".menuRight").css({"height": ($(window).height()-$(".menuRight").offset().top - 10)+"px"});
 			/* use margin-top to make .barRight acts as if it is fixed instead of position:fixed */
-			$(window).scroll(function(){ $(".barRight").css({"margin-top": $(window).scrollTop()+"px"});});
+			function fixedMenuRight(){ $(".barRight").css({"margin-top":""});$(".barRight").css({"margin-top": $(window).scrollTop()+"px"});}
+			$(window).scroll(function(){fixedMenuRight()});
+			$(window).resize(function(){fixedMenuRight()});
 		})(jQuery);
 		/* Show Full image */
 		(function($){

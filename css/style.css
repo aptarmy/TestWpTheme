@@ -18,8 +18,9 @@ body {
 	background-attachment: fixed;
 }
 .logo {
-	width: 100%;
-	margin-top: 5px;
+    max-width: 100%;
+    margin: auto;
+    display: block;
 }
 .menuLeftWrapper {
 	border-radius: 30px;
