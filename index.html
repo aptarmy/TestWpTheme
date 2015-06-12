@@ -152,12 +152,18 @@ jQuery(document).ready(function(){
 		var currentPage = "home";
 		$("header nav").find("a").click(function(){
 			var href = $(this).attr("href").replace("#","");
+			var $specificPage = $("section.pageSlide").find("a[href='"+href+"']").closest("article.page");
+			var $allPages = $("section.pageSlide").find("article.page");
 			if(currentPage === href){ return false; }
-			$("section.pageSlide").find("article.page").slideUp();
+			$allPages.slideDown();
+			$(".mainArea").prev("article.page").remove();
 			if (href != "home"){
+				$(".runningText").slideUp();
 				$(".mainArea").slideUp();
-				$("section.pageSlide").find("a[href='"+href+"']").closest("article.page").slideDown();
+				$specificPage.slideUp().clone().css({"display":"none"}).insertBefore(".mainArea");
+				$(".mainArea").prev("article.page").slideDown();
 			} else {
+				$(".runningText").slideDown();
 				$(".mainArea").slideDown();
 			}
 			currentPage = href;
