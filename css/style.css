@@ -250,7 +250,7 @@ header nav li img.highlight {
 	background-image: url(../img/wooden-bg.jpg);
 	background-size: cover;
 	height: auto;
-	padding: 15px 20px;
+	padding: 5px 17px;
 	margin: 10px 0 0 0;
 }
 .menuRight ul {
@@ -264,17 +264,17 @@ header nav li img.highlight {
     padding-top: 0;
 }
 .menuRight li a {
-    color: rgb(0,220,0);
-    text-decoration: none;
-    display: inline-block;
-    text-align: center;
-    width: 100%;
-    padding: 7px 0;
-    margin: 11px 0 0 0;
-    border-radius: 30px;
-    background-color: rgb(40, 40, 40);
-    box-shadow: 0px 5px 20px rgb(0, 0, 0) inset, 1px 1px 0pc rgb(220,190,190);
-    font-size: 23px;
+	color: rgb(0,220,0);
+	text-decoration: none;
+	display: inline-block;
+	text-align: center;
+	width: 100%;
+	padding: 4px 0;
+	margin: 6px 0 0 0;
+	border-radius: 30px;
+	background-color: rgb(40, 40, 40);
+	box-shadow: 0px 5px 20px rgb(0, 0, 0) inset, 1px 1px 0pc rgb(220,190,190);
+	font-size: 20px;
 }
 .menuRight li a:hover {
 	color: yellow;
@@ -306,9 +306,6 @@ header nav li img.highlight {
 	min-height: 700px;
 	background-color: whitesmoke;
 }
-.closePost {
-    overflow: hidden;
-}
 .closePost:before {
     font-family: 'Glyphicons Halflings';
     content: '\e014';
@@ -318,14 +315,16 @@ header nav li img.highlight {
     right: 20px;
     font-size: 25px;
     text-align: center;
-    opacity: 0.5;
-    color: black;
+    color: white;
     border-radius: 20px;
-    border: 2px solid black;
     width: 40px;
     height: 40px;
     line-height: 40px;
     cursor: pointer;
+    background-color: gray;
+}
+.closePost:hover:before{
+	background-color: black;
 }
 /* Category */
 .posts {
@@ -372,10 +371,10 @@ header nav li img.highlight {
     z-index: 100;
 }
 .showFullImg {
-    width: 80%;
-    height: 80%;
-    margin: auto;
-    overflow: hidden;
+	position: relative;
+	width: 80%;
+	height: 80%;
+	margin: auto;
 }
 .showFullImg img {
     width: 100%;
@@ -383,6 +382,23 @@ header nav li img.highlight {
     display: block;
     border-radius: 20px;
     box-shadow: 0px 0px 50px black;
+}
+.closeFullImg {
+	position: fixed;
+}
+.closeFullImg:before {
+	font-family: 'Glyphicons Halflings';
+	content: '\e014';
+	display: block;
+	font-size: 25px;
+	text-align: center;
+	color: white;
+	border-radius: 20px;
+	width: 40px;
+	height: 40px;
+	line-height: 40px;
+	cursor: pointer;
+	background-color: gray;
 }
 .backBtn {
     padding: 10px 0 0 0;
@@ -401,20 +417,47 @@ header nav li img.highlight {
     background-color: rgb(255,240,150);
     color: black;
 }
-.pagination li {
-	float: left;
-	list-style: none;
+.apt-pager {
+	padding: 5px 0 35px;
 }
-.pagination li a {
-	padding: 5px 10px;
-	background-color: yellow;
-	color: black;
+.apt-pager-text {
+	color: rgb(80,70,60);
 	text-decoration: none;
-	margin-left: 15px;
-	font-size: 20px;
-	border-radius: 20px;
+	display: block;
+	float: left;
+	text-align: center;
+	padding: 0px 15px;
+	border-bottom: 7px solid rgb(200, 0, 0);
+	font-size: 2em;
+	font-weight: bold;
+	margin: 0 2px;
 }
-.pagination li a:hover {
-	color: white;
-	background-color: blue;
+.apt-pager:before, .apt-pager:after {
+	content: ' ';
+	display: table;
+	clear: both;
+}
+.apt-pager ul {
+	padding: 0;
+	display: block;
+	float: left;
+	margin: 3px 0 0;
+}
+.apt-pager li {
+	display: inline-block;
+	list-style: none;
+	float: left;
+}
+.apt-pager li a {
+	color: rgba(255,255,255,0.2);
+	text-decoration: none;
+	padding: 0 30px;
+	font-size: 2.1em;
+	font-weight: bold;
+	border-bottom: 7px solid rgba(255,255,0,0.2);
+	margin: 0 2px;
+}
+.apt-pager li a:hover {
+	color: rgba(255,255,255,1);
+	border-bottom: 7px solid rgba(255,255,0,1);
 }

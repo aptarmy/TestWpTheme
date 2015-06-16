@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html>
 <head>
 <title>Blue Print</title>
@@ -40,14 +40,17 @@
 			</div>
 		</div>
 		<div class='showFullImgWrapper'>
-			<div class='showFullImg'><img src=''></div>
+			<div class='showFullImg'><img src=''><div class='closeFullImg'></div></div>
 		</div>
-		<div class='pagination'><ul>
-			<li><a href='#'>1</a></li>
-			<li><a href='#'>2</a></li>
-			<li><a href='#'>3</a></li>
-			<li><a href='#'>4</a></li>
-		</ul></div>
+		<div class='apt-pager'>
+			<div class='apt-pager-text'>Page</div>
+			<ul>
+				<li><a href='#'>1</a></li>
+				<li><a href='#'>2</a></li>
+				<li><a href='#'>3</a></li>
+				<li><a href='#'>4</a></li>
+			</ul>
+		</div>
 	</div>
 	<div class='col-md-2'>
 		<div class='barRight'>
@@ -101,6 +104,7 @@
 						$img.css({"height":"100%", "width":"auto"});
 					}
 					$showFullImg.css({"margin-top": ((winH-showFullImgH)/2)+"px"});
+					$(".closeFullImg").css({"left": $img.offset().left+$img.width()-20+"px", "top":$img.offset().top-$(window).scrollTop()-20+"px"});
 				});
 			});
 			$(".showFullImgWrapper").click(function(){
