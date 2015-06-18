@@ -6,8 +6,9 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='css/bootstrap.css' rel='stylesheet'>
 <link href='css/style.css' rel='stylesheet'>
-<link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1270px)">
-<link rel="stylesheet" href="css/extra-grid.css">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1270px)"> <!-- style top nav on tablet -->
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:991px)"><!-- set barRight to default -->
+<link rel="stylesheet" href="css/extra-grid.css"><!-- Fix main content grid -->
 </head>
 <body>
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
@@ -72,7 +73,7 @@
 				<li><a href='#page/mail'><img src='icons/mail.png'></a></li>
 			</ul></nav>
 			<div class='collapseBtn'><span class='glyphicon glyphicon-menu-hamburger'></span></div>
-			<div class='searchWrapper'><img src='icons/search.png'><input type='text'></div>
+			<div class='searchWrapper'><img class='search' src='icons/search.png'><input type='text'></div>
 		</header>
 		<!-- Running Text -->
 		<div class='runningText'><marquee direction="left"> ข่าวด่วนจี๋!!! ... ตกตะลึง ... พบตัวดุ๊กดิ๊กที่ป่าชายเลนสถานตากอากาศบางปู ลักษณะคล้ายปลาตีน แต่ตัวใหญ่เท่าช้าง คนแห่กันมาดู ทำเอารถติดยาวววว... ไปจนถึงซีคอนสแควร์ </marquee></div>
@@ -147,37 +148,34 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
 <script src='js/main.js'></script>
 <script type="text/javascript">
-jQuery(document).ready(function(){
-	// Slider page on top menu
 	(function($){
-		var currentPage = "home";
-		$("header nav").find("a").click(function(){
-			var href = $(this).attr("href").replace("#","");
-			var $specificPage = $("section.pageSlide").find("a[href='"+href+"']").closest("article.page");
-			var $allPages = $("section.pageSlide").find("article.page");
-			if(currentPage === href){ return false; }
-			$allPages.slideDown();
-			$(".mainArea").prev("article.page").remove();
-			if (href != "home"){
-				$(".runningText").slideUp();
-				$(".mainArea").slideUp();
-				$specificPage.slideUp().clone().css({"display":"none"}).insertBefore(".mainArea");
-				$(".mainArea").prev("article.page").slideDown();
-			} else {
-				$(".runningText").slideDown();
-				$(".mainArea").slideDown();
-			}
-			currentPage = href;
-			$("header nav li").find("img").removeClass("highlight");
-			$(this).find("img").addClass("highlight");
+		$(document).ready(function(){
+			// Slider page on top menu
+			(function(){
+				var currentPage = "home";
+				$("header nav").find("a").click(function(){
+					var href = $(this).attr("href").replace("#","");
+					var $specificPage = $("section.pageSlide").find("a[href='"+href+"']").closest("article.page");
+					var $allPages = $("section.pageSlide").find("article.page");
+					if(currentPage === href){ return false; }
+					$allPages.slideDown();
+					$(".mainArea").prev("article.page").remove();
+					if (href != "home"){
+						$(".runningText").slideUp();
+						$(".mainArea").slideUp();
+						$specificPage.slideUp().clone().css({"display":"none"}).insertBefore(".mainArea");
+						$(".mainArea").prev("article.page").slideDown();
+					} else {
+						$(".runningText").slideDown();
+						$(".mainArea").slideDown();
+					}
+					currentPage = href;
+					$("header nav li").find("img").removeClass("highlight");
+					$(this).find("img").addClass("highlight");
+				});
+			})();
 		});
 	})(jQuery);
-
-	// Define height of berRight
-	(function($){
-		$(".menuRight").css({"height": $(".sliderWrapper").height()+"px"});
-	})(jQuery);
-});
 </script>
 </body>
 </html>

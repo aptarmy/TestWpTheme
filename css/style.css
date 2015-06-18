@@ -26,7 +26,7 @@ body {
 	border-radius: 30px;
 	background-color: rgb(50,50,50);
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-	padding: 12px;
+	padding: 5px 12px 12px;
 	margin-top: 10px;
 }
 .menuLeft {
@@ -39,7 +39,7 @@ body {
 	color: rgb(240,230,10); /* เหลืองอ่อน */
 	text-align: center;
 	padding: 0;
-	margin: -8px 0 0 -5px;
+	margin: 0;
 }
 .menuLeft ul {
 	padding: 0;
@@ -57,7 +57,7 @@ body {
 .menuLeft>ul>li>a { /* Mainmenu Slide*/
 	color: rgb(200,200,180); /* ขาวซีด */
 	font-size: 22px;
-	margin-top: -5px;
+	line-height: 28px;
 }
 .menuLeft>ul>li>a:before {
 	content: '★';
@@ -95,18 +95,33 @@ header {
 	background-color: rgb(0,110,0);
 	box-shadow: 0px 15px 20px 6px rgba(120, 200, 240, .3) inset;
 }
+header .pageIcon {
+	padding: 5px;
+	height: 100%;
+	float: left;
+}
+header .pageTitle {
+	float: left;
+	color: white;
+	text-shadow: 1px 2px 0px black;
+	padding: 0 5px;
+	font-weight: bold;
+	font-size: 2.2em;
+    line-height: 45px;
+}
 header nav {
 	float: right;
+    padding: 0 5px;
     transition: right 0.2s ease;
 }
 header nav ul {
 	padding: 0;
-	margin-left: 10px;
+    margin: 0 -3px;
 }
 header nav li {
 	float: left;
 	list-style: none;
-	margin: -15px 6px 0 0;
+	margin: -15px 3px 0 3px;
 }
 header nav li img {
 	height: 50px;
@@ -131,10 +146,11 @@ header nav li img.highlight {
 }
 .searchWrapper {
 	float: right;
+    margin: 0 5px;
 }
-.searchWrapper img {
+.searchWrapper img.search {
 	height: 40px;
-	margin: 2px 0;
+	margin: 2.5px 0;
 	float: left;
 }
 .searchWrapper input[type=text] {
@@ -160,19 +176,6 @@ header nav li img.highlight {
 	text-shadow: 0px 1px 0px rgb(100,100,100);
 	line-height: 40px;
     height: 40px;
-}
-.pageIcon {
-	margin: 4px 0 0 8px;
-	height: 36px;
-	float: left;
-}
-.pageTitle {
-	float: left;
-	color: white;
-	text-shadow: 1px 2px 0px black;
-	margin-left: 5px;
-	font-weight: bold;
-	font-size: 2.2em;
 }
 .sliderWrapper {
 	height: 545px;
@@ -249,12 +252,12 @@ header nav li img.highlight {
 .menuRight {
 	background-image: url(../img/wooden-bg.jpg);
 	background-size: cover;
-	height: auto;
-	padding: 5px 17px;
+	height: 545px;
+	padding: 10px 17px;
 	margin: 10px 0 0 0;
 }
 .menuRight ul {
-    margin: 0;
+    margin: -3px 0;
     padding: 0;
 }
 .menuRight li {
@@ -270,7 +273,7 @@ header nav li img.highlight {
 	text-align: center;
 	width: 100%;
 	padding: 4px 0;
-	margin: 6px 0 0 0;
+	margin: 3px 0;
 	border-radius: 30px;
 	background-color: rgb(40, 40, 40);
 	box-shadow: 0px 5px 20px rgb(0, 0, 0) inset, 1px 1px 0pc rgb(220,190,190);
@@ -295,9 +298,8 @@ header nav li img.highlight {
 .pos-absolute {
     position: absolute;
 }
-.col-v-center {
-    display: inline-block !important;
-    float: none !important;
+.v-center {
+    display: flex;
     vertical-align: middle;
 }
 /* Post */
@@ -371,10 +373,12 @@ header nav li img.highlight {
     z-index: 100;
 }
 .showFullImg {
-	position: relative;
+	position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
 	width: 80%;
 	height: 80%;
-	margin: auto;
 }
 .showFullImg img {
     width: 100%;
@@ -383,8 +387,14 @@ header nav li img.highlight {
     border-radius: 20px;
     box-shadow: 0px 0px 50px black;
 }
+.showFullImg img:before {
+    content: "X";
+
+}
 .closeFullImg {
 	position: fixed;
+    left: 0px;
+    top: 0px;
 }
 .closeFullImg:before {
 	font-family: 'Glyphicons Halflings';
@@ -418,7 +428,8 @@ header nav li img.highlight {
     color: black;
 }
 .apt-pager {
-	padding: 5px 0 35px;
+	padding: 10px 0;
+    margin: 0 -2px;
 }
 .apt-pager-text {
 	color: rgb(80,70,60);

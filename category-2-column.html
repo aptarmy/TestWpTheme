@@ -6,8 +6,8 @@
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <link href='css/bootstrap.css' rel='stylesheet'>
 <link href='css/style.css' rel='stylesheet'>
-<link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1270px)">
-<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:991px)">
+<link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1270px)"><!-- style top nav on tablet -->
+<link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:991px)"><!-- set barRight to default -->
 </head>
 <body>
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
@@ -16,10 +16,8 @@
 	<div class='col-md-10'>
 		<!-- Logo & Ads -->
 		<div class='row'>
-			<div class='col-md-2 col-v-center'>
-				<img class='logo' src='img/news-logo.png' style='max-height:119px;'>
-			</div><!-- Remove space between 2 column
-			--><div class='col-md-10 col-v-center'><div class='adsWidget'><img src='img/ads-728x90.jpg'></div></div>
+			<div class='col-md-1 v-center'><img class='logo' src='img/news-logo.png' style='max-height:90px;'></div>
+			<div class='col-md-11'><div class='adsWidget'><img src='img/ads-970x90.png'></div></div>
 		</div>
 		<!-- Show 6 posts -->
 		<div class='posts'>
@@ -40,7 +38,8 @@
 			</div>
 		</div>
 		<div class='showFullImgWrapper'>
-			<div class='showFullImg'><img src=''><div class='closeFullImg'></div></div>
+			<div class='showFullImg'><img src=''></div>
+			<div class='closeFullImg'></div>
 		</div>
 		<div class='apt-pager'>
 			<div class='apt-pager-text'>Page</div>
@@ -78,33 +77,35 @@
 	jQuery("document").ready(function(){
 		/* Fix rightBar position */
 		(function($){
-			/* Define .menuRight after page is loaded completely */
-			function defineMenuRightHeight(){	$(".menuRight").css({"height": (($(window).height()+$(window).scrollTop())-$(".menuRight").offset().top - 10)+"px"});}
 			/* use margin-top to make .barRight acts as if it is fixed instead of position:fixed */
 			function fixedMenuRight(){ $(".barRight").css({"margin-top":""});$(".barRight").css({"margin-top": $(window).scrollTop()+"px"});}
 			/* browser's window even */
-			defineMenuRightHeight();
-			$(window).scroll(function(){fixedMenuRight()}).resize(function(){fixedMenuRight(); defineMenuRightHeight()});			
+			$(window).scroll(function(){fixedMenuRight()}).resize(function(){fixedMenuRight();});
 		})(jQuery);
+
 		/* Show Full image */
 		(function($){
 			$(".post").click(function(){
-				var winH = $(window).height();
+				/* declare variable */
 				var $showFullImg = $(".showFullImg");
 				var $img = $showFullImg.find("img");
 				var bgAttr = $(this).css("background-image");
 				var bgUrl = bgAttr.slice(4,-1);
+				function calFullImgPos(){
+					var showFullImgH = $showFullImg.height();
+					var imgH = $img.height();
+					if(imgH > showFullImgH){
+						$img.css({"height":"100%", "width":"auto"});
+					}
+					$(".closeFullImg").css({"left": $img.offset().left+$img.width()-20+"px", "top":$img.offset().top-$(window).scrollTop()-20+"px"});
+				}
+				/* statement */
 				$img.css({"height":"", "width":""});
 				$img.attr("src", bgUrl);
 				$img.load(function(){
 					$(".showFullImgWrapper").fadeIn();
-					var showFullImgH = $showFullImg.height();
-					var imgH = $img.height();
-					if(imgH > (showFullImgH)){
-						$img.css({"height":"100%", "width":"auto"});
-					}
-					$showFullImg.css({"margin-top": ((winH-showFullImgH)/2)+"px"});
-					$(".closeFullImg").css({"left": $img.offset().left+$img.width()-20+"px", "top":$img.offset().top-$(window).scrollTop()-20+"px"});
+					calFullImgPos();
+					$(window).resize(function(){ calFullImgPos() });
 				});
 			});
 			$(".showFullImgWrapper").click(function(){
