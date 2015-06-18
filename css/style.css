@@ -246,12 +246,50 @@ header nav li img.highlight {
     width: 100%;
     height: 100%;
 }
+.menuRightWrapper {
+	position: relative;
+}
+.menuRightWrapper:after, .menuRightWrapper:before {
+	font-family: 'Glyphicons Halflings';
+	color: white;
+	text-align: center;
+	display: block;
+	opacity: 0;
+	position: absolute;
+	left: 0px;
+	right: 0px;
+	height: 15px;
+	line-height: 15px;
+	transition: opacity 0.1s ease;
+}
+.menuRightWrapper:after {
+	bottom: 0px;
+	content: "\e114";
+	background-image: -webkit-linear-gradient(top, transparent 0%, rgba(0,0,0,0.1) 20%, rgba(0, 0, 0, 0.3) 70%, rgba(0,0,0,0.5) 100%);
+}
+.menuRightWrapper:before {
+	top: 0px;
+	content: "\e113";
+	background-image: -webkit-linear-gradient(bottom, transparent 0%, rgba(0,05,0,0.1) 20%, rgba(0, 0, 0, 0.3) 70%, rgba(0,0,0,0.5) 100%);
+}
+.menuRightWrapper:hover:before, .menuRightWrapper:hover:after { opacity: 1; }
 .menuRight {
 	background-image: url(../img/wooden-bg.jpg);
 	background-size: cover;
 	height: auto;
 	padding: 5px 17px;
 	margin: 10px 0 0 0;
+	overflow-y: hidden;
+}
+.menuRight:hover {
+	overflow-y: overlay;
+}
+.menuRight::-webkit-scrollbar {
+	width: 10px;
+}
+.menuRight::-webkit-scrollbar-thumb {
+	background-color: rgba(255,255,255,0.4);
+	border-radius: 5px;
 }
 .menuRight ul {
     margin: 0;
