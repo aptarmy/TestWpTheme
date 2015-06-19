@@ -16,7 +16,7 @@
 	<div class='col-md-10'>
 		<!-- Logo & Ads -->
 		<div class='row'>
-			<div class='col-md-1'><div class='backBtn'><a href="index.html"><span class='glyphicon glyphicon-home'></span></a></div></div>
+			<div class='col-md-1'><a href="index.html"><img class='backBtn' src='icons/backBtn-normal.png' onmouseover='this.src="icons/backBtn-hover.png"' onmouseout='this.src="icons/backBtn-normal.png"'></a></div>
 			<div class='col-md-11'><div class='adsWidget'><img src='img/ads-970x90.png'></div></div>
 		</div>
 		<!-- Show 6 posts -->
@@ -53,7 +53,7 @@
 	</div>
 	<div class='col-md-2'>
 		<div class='barRight'>
-			<img class='logo' src='img/news-logo.png'>
+			<img class='logo' src='img/news-logo.png' style='max-height: 90px;'>
 			<div class='menuRightWrapper'>
 				<div class='menuRight'><ul>
 					<li><a href="category-2-column.html">World News</a></li>
@@ -66,6 +66,7 @@
 					<li><a href="category-2-column.html">Travel</a></li>
 					<li><a href="category-2-column.html">Entertain</a></li>
 				</ul></div>
+			</div>
 		</div>
 	</div>
 </div> </div>
@@ -75,17 +76,17 @@
 <script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
 <script src='js/main.js'></script>
 <script>
-	jQuery("document").ready(function(){
+	(function($){ $("document").ready(function(){
 		/* Fix rightBar position */
-		(function($){
+		(function(){
 			/* use margin-top to make .barRight acts as if it is fixed instead of position:fixed */
-			function fixedMenuRight(){ $(".barRight").css({"margin-top":""});$(".barRight").css({"margin-top": $(window).scrollTop()+"px"});}
+			function fixedMenuRight(){ $(".barRight").css({"margin-top":""});$(".barRight").css({"margin-top": ($(window).scrollTop()+10)+"px"});}
 			/* browser's window even */
 			$(window).scroll(function(){fixedMenuRight()}).resize(function(){fixedMenuRight();});
-		})(jQuery);
+		})();
 
 		/* Show Full image */
-		(function($){
+		(function(){
 			$(".post").click(function(){
 				/* declare variable */
 				var $showFullImg = $(".showFullImg");
@@ -114,8 +115,8 @@
 					$(".showFullImg").find("img").attr("src", "");
 				});
 			});
-		})(jQuery);
-	});
+		})();
+	});})(jQuery);
 </script>
 </body>
 </html>
