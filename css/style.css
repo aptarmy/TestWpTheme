@@ -308,7 +308,7 @@ header nav li img.highlight {
 }
 .v-center {
     display: flex;
-    vertical-align: middle;
+    align-items: center;
 }
 /* Post */
 .content {
