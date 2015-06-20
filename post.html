@@ -1,5 +1,5 @@
 ﻿<!DOCTYPE html>
-<html> 
+<html>
 <head>
 <title>Blue Print</title>
 <meta charset='utf-8' />
@@ -33,11 +33,17 @@
 <script type="text/javascript">
 	(function($){
 		$(document).ready(function(){
+			// close post
 			$(".content").append("<div class='closePost'></div>");
 			$(".content").on("click", ".closePost", function(){
+				function getHostNameFromString(urlString){
+					var a = document.createElement("a");
+					a.href= urlString;
+					return a.hostname;
+				}
 				$(".closePost").fadeOut(100);
 				$(".content").animate({"margin-left":"100%"},200, function(){
-					window.history.back();
+					window.location.href = "category-2-column.html";
 				});
 			});
 		});

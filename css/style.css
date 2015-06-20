@@ -341,12 +341,16 @@ header nav li img.highlight {
 	min-height: 550px;
 	position: relative;
 }
-.postWrapper {
+.post-img {
 	height: 250px;
-	width: 33.33%;
 	padding: 0 5px;
 	margin: 10px 0 0 0;
-	float: left;
+}
+@media (min-width:992px) {
+    .post-img {
+        width: 33.33%;
+        float: left;
+    }
 }
 .post {
 	height: 100%;
