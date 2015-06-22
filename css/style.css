@@ -482,6 +482,10 @@ footer {
     max-width: 100%;
     max-height: 90px;
     margin-top: 10px;
+    opacity: 0.5;
+}
+.backBtn:hover {
+    opacity: 1;
 }
 .apt-pager {
 	padding: 10px 0;
