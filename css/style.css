@@ -2,7 +2,7 @@
 .container-fluid {
     padding: 0 10px;
 }
-.col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
+.col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
     padding: 0 5px;
 }
 .row {
@@ -198,8 +198,7 @@ header nav li img.highlight {
 	right: 0px;
 	bottom: 0px;
 	font-size: 30px;
-	line-height: 34px;
-	padding: 5px 15px;
+	padding: 3px 15px;
 	text-shadow: 0px 1px 0px white;
 	background-color: rgba(255,255,255,0.5);
 }
@@ -245,7 +244,7 @@ header nav li img.highlight {
     -webkit-filter: brightness(1.3);
 }
 .barRight {
-    margin: 10px 0 0 0;
+    position: absolute;
 }
 .menuRight {
 	background-image: url(../img/wooden-bg.jpg);
@@ -298,7 +297,11 @@ header nav li img.highlight {
     background-color: whitesmoke;
     padding: 15px 10px;
 }
-
+footer {
+    margin: 10px 0 0 0;
+    padding: 15px 0;
+    background: rgb(10,10,10);
+}
 /* Helper Class */
 .pos-static {
     position: static;
@@ -309,6 +312,15 @@ header nav li img.highlight {
 .v-center {
     display: flex;
     align-items: center;
+}
+@media (min-width: 992px){
+    .row-full-height {
+        display: table-row;
+    }
+    .col-full-height {
+        display: table-cell;
+        float: none;
+    }
 }
 /* Post */
 .content {
@@ -336,6 +348,39 @@ header nav li img.highlight {
 .closePost:hover:before{
 	background-color: black;
 }
+.relatePosts {
+    margin-top: 10px;
+}
+.relatePosts h3 {
+    color: white;
+    margin: 0;
+    padding: 0;
+}
+.relatePosts .relatePost {
+    width: 100%;
+    height: 200px;
+    padding: 0 5px;
+    margin-top: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+}
+.relatePosts .relatePost:hover {
+    -webkit-filter: brightness(1.2);
+}
+.relatePosts .relatePost h4 {
+    color: black;
+    position: absolute; /* relative to .featuredImg */
+	bottom: 0px;
+	left: 0px;
+	right: 0px;
+	line-height: 30px;
+	font-size: 16px;
+	padding: 0 15px;
+    margin: 0;
+	background-color: rgba(255,255,255,0.5);
+}
+
 /* Category */
 .posts {
 	min-height: 550px;
@@ -346,6 +391,12 @@ header nav li img.highlight {
 	padding: 0 5px;
 	margin: 10px 0 0 0;
 }
+@media (min-width:768px) {
+    .post-img {
+        width: 50%;
+        float: left;
+    }
+}
 @media (min-width:992px) {
     .post-img {
         width: 33.33%;
@@ -353,9 +404,8 @@ header nav li img.highlight {
     }
 }
 .post {
-	height: 100%;
-	width: 100%;
-	float: left;
+	height: 250px;
+    margin-top: 10px;
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -373,8 +423,6 @@ header nav li img.highlight {
 	bottom: 0px;
 	left: 0px;
 	right: 0px;
-	height: 30px;
-	line-height: 30px;
 	font-size: 20px;
 	padding: 0 15px;
 	background-color: rgba(255,255,255,0.5);

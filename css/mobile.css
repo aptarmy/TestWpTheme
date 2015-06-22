@@ -1,5 +1,6 @@
 .barRight {
-    margin-top: 0px !important;
+    position: static;
+    margin: 10px 0 0 0;
 }
 .menuRight {
     height: auto !important;
