@@ -3,5 +3,39 @@
     margin: 10px 0 0 0;
 }
 .menuRight {
-    height: auto !important;
+    height: 100% !important;
+    width: 230px;
+    margin: 0;
+    position: fixed;
+    top: 0;
+    right: -230px;
+    -webkit-transition: right 0.2s ease;
+    z-index: 11;
+    box-shadow: 0px 0px 10px black;
+}
+.menuRightShadow {
+    display: none;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    height: 100%;
+    width: 100%;
+    background-color: rgba(0,0,0,0.7);
+}
+.cat-collapseBtn {
+    z-index: 10;
+    display: block;
+    position: fixed;
+    top: 15px;
+    right: 15px;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    font-size: 20px;
+    cursor: pointer;
+    color: black;
+    background-color: white;
+    border-radius: 25px;
+    text-align: center;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }

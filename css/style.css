@@ -394,6 +394,9 @@ footer {
 }
 
 /* Category */
+.cat-collapseBtn {
+    display: none;
+}
 .posts {
 	min-height: 550px;
 	position: relative;

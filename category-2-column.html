@@ -54,21 +54,21 @@
 		</div>
 	</div>
 	<div class='col-md-2 col-full-height'><!-- cal-full-height class will display as table-cell & make its siblings height equal to its height -->
-		<div class='barRightBox'>
-			<div class='barRight' style='margin-top:10px;'>
-				<img class='logo' src='img/news-logo.png'>
-				<div class='menuRight'><ul>
-					<li><a href="category-2-column.html">World News</a></li>
-					<li><a href="category-2-column.html">Computer</a></li>
-					<li><a href="category-2-column.html">Life Style</a></li>
-					<li><a href="category-2-column.html">Mobile</a></li>
-					<li><a href="category-2-column.html">Vehicles</a></li>
-					<li><a href="category-2-column.html">Miracle</a></li>
-					<li><a href="category-2-column.html">Sport</a></li>
-					<li><a href="category-2-column.html">Travel</a></li>
-					<li><a href="category-2-column.html">Entertain</a></li>
-				</ul></div>
-			</div>
+		<div class='barRight' style='margin-top:10px;'>
+			<img class='logo' src='img/news-logo.png'>
+			<div class='menuRight'><ul>
+				<li><a href="category-2-column.html">World News</a></li>
+				<li><a href="category-2-column.html">Computer</a></li>
+				<li><a href="category-2-column.html">Life Style</a></li>
+				<li><a href="category-2-column.html">Mobile</a></li>
+				<li><a href="category-2-column.html">Vehicles</a></li>
+				<li><a href="category-2-column.html">Miracle</a></li>
+				<li><a href="category-2-column.html">Sport</a></li>
+				<li><a href="category-2-column.html">Travel</a></li>
+				<li><a href="category-2-column.html">Entertain</a></li>
+			</ul></div>
+			<div class='menuRightShadow'></div>
+			<div class='cat-collapseBtn'><span class='glyphicon glyphicon-menu-hamburger'></span></div>
 		</div>
 	</div>
 </div> </div>
@@ -112,7 +112,6 @@
 			/* browser's window even */
 			$(window).scroll(function(){fixedMenuRight()}).resize(function(){fixedMenuRight();setHeightMenuRight()});
 		})();
-
 		/* Show Full image */
 		(function(){
 			$(".post").click(function(){
@@ -142,6 +141,35 @@
 				$(this).fadeOut(function(){
 					$(".showFullImg").find("img").attr("src", "");
 				});
+			});
+		})();
+		// Collapse Button
+		(function(){
+			// calculate fixed position
+			function calCatCallapseBtnPos(){
+				if($(window).scrollTop() == 0){
+					$(".cat-collapseBtn").css({"top":$(".post").offset().top+5+"px"});
+				}else if($(".post").eq(0).offset().top > $(window).scrollTop()){
+					$(".cat-collapseBtn").css({"top":$(".post").offset().top+5-$(window).scrollTop()+"px"});
+				}else{
+					$(".cat-collapseBtn").css({"top":"5px"});
+				}
+			}
+			calCatCallapseBtnPos();
+			$(window).scroll(function(){ calCatCallapseBtnPos() }).resize(function(){ calCatCallapseBtnPos() });
+
+			// fire event
+			$(".cat-collapseBtn").click(function(){
+				$(".menuRight").css({"right":"0px"});
+				$(".menuRightShadow").css({"display":"block"});
+			});
+			$(".menuRight").mouseleave(function(){
+				$(this).css({"right":"-230px"});
+				$(".menuRightShadow").css({"display":"none"});
+			});
+			$(".menuRightShadow").click(function(){
+				$(this).css({"display":"none"});
+				return false;
 			});
 		})();
 	});})(jQuery);
