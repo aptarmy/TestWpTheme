@@ -39,7 +39,7 @@
 				<div class='col-md-4 col-sm-6 col-xs-12'><div class='post' style='background-image:url(img/post/post-6.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 12</a></div></div></div>
 			</div>
 		</div>
-		<div class='showFullImgWrapper'>
+		<div class='showFullImgShadow'>
 			<div class='showFullImg'><img src=''></div>
 			<div class='closeFullImg'></div>
 		</div>
@@ -142,12 +142,12 @@
 				$img.css({"height":"", "width":""});
 				$img.attr("src", bgUrl);
 				$img.load(function(){
-					$(".showFullImgWrapper").fadeIn();
+					$(".showFullImgShadow").fadeIn();
 					calFullImgPos();
 					$(window).resize(function(){ calFullImgPos() });
 				});
 			});
-			$(".showFullImgWrapper").click(function(){
+			$(".showFullImgShadow").click(function(){
 				$(this).fadeOut(function(){
 					$(".showFullImg").find("img").attr("src", "");
 				});

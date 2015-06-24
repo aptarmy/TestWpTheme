@@ -269,6 +269,7 @@ header nav li img.highlight {
 	padding: 10px 17px;
 	margin: 10px 0 0 0;
 	overflow-y: hidden;
+    -ms-overflow: scroll;
 }
 .menuRight:hover {
 	overflow-y: overlay;
@@ -445,7 +446,7 @@ footer {
 .postTitle a {
     color: rgb(0,20,0);
 }
-.showFullImgWrapper {
+.showFullImgShadow {
     left: 0px;
     top: 0px;
     position: fixed;
