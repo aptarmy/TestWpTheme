@@ -39,10 +39,6 @@
 				<div class='col-md-4 col-sm-6 col-xs-12'><div class='post' style='background-image:url(img/post/post-6.jpg)'><div class='postTitle'><a href='post.html'>Title of Post 12</a></div></div></div>
 			</div>
 		</div>
-		<div class='showFullImgShadow'>
-			<div class='showFullImg'><img src=''></div>
-			<div class='closeFullImg'></div>
-		</div>
 		<div class='apt-pager'>
 			<div class='apt-pager-text'>Page</div>
 			<ul>
@@ -86,6 +82,7 @@
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
 <script src='bower_components/jquery/dist/jquery.min.js'></script>
 <script src='js/main.js'></script>
+<script src='js/lib/showFullImg/showFullImg.js'></script>
 <script>
 	(function($){ $("document").ready(function(){
 		/* backBtn slide page to right screen after click */
@@ -129,36 +126,7 @@
 			$(window).scroll(function(){fixedMenuRight()}).resize(function(){fixedMenuRight();setHeightMenuRight()});
 		})();
 		/* Show Full image */
-		(function(){
-			$(".post").click(function(){
-				/* declare variable */
-				var $showFullImg = $(".showFullImg");
-				var $img = $showFullImg.find("img");
-				var bgAttr = $(this).css("background-image");
-				var bgUrl = bgAttr.slice(4,-1);
-				function calFullImgPos(){
-					var showFullImgH = $showFullImg.height();
-					var imgH = $img.height();
-					if(imgH > showFullImgH){
-						$img.css({"height":"100%", "width":"auto"});
-					}
-					$(".closeFullImg").css({"left": $img.offset().left+$img.width()-20+"px", "top":$img.offset().top-$(window).scrollTop()-20+"px"});
-				}
-				/* statement */
-				$img.css({"height":"", "width":""});
-				$img.attr("src", bgUrl);
-				$img.load(function(){
-					$(".showFullImgShadow").fadeIn();
-					calFullImgPos();
-					$(window).resize(function(){ calFullImgPos() });
-				});
-			});
-			$(".showFullImgShadow").click(function(){
-				$(this).fadeOut(function(){
-					$(".showFullImg").find("img").attr("src", "");
-				});
-			});
-		})();
+		$(".post").showFullImg();
 		// Collapse Button
 		(function(){
 			// calculate fixed position
