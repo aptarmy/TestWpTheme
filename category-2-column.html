@@ -4,7 +4,7 @@
 <title>Blue Print</title>
 <meta charset='utf-8' />
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<link href='css/bootstrap.css' rel='stylesheet'>
+<link href='bower_components/bootstrap/dist/css/bootstrap.min.css' rel='stylesheet'>
 <link href='css/style.css' rel='stylesheet'>
 <link rel="stylesheet" href="css/tablet.css" media="screen and (max-width:1270px)"><!-- style top nav on tablet -->
 <link rel="stylesheet" href="css/mobile.css" media="screen and (max-width:991px)"><!-- set barRight to default -->
@@ -14,12 +14,12 @@
 </head>
 <body>
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
-<div class='container-fluid'><div class='row row-full-height'><!-- row-full-height class will display as table-row & make inner collumns high equally -->
+<div class='container-fluid pos-relative'><div class='row row-full-height'><!-- row-full-height class will display as table-row & make inner collumns high equally -->
 	<!-- Right column -->
 	<div class='col-md-10 col-full-height'><!-- cal-full-height class will display as table-cell & make its siblings height equal to its height -->
 		<!-- Logo & Ads -->
 		<div class='row v-center'><!-- v-center class make img.logo vertically center -->
-			<div class='col-md-1 hidden-sm hidden-xs'><a href="index.html"><img class='backBtn' src='icons/home-noborder.png'></a></div>
+			<div class='col-md-1 hidden-sm hidden-xs'><img class='backBtn' src='icons/home-noborder.png'></div>
 			<div class='col-md-11'><div class='adsWidget'><img src='img/ads-970x90.png'></div></div>
 		</div>
 		<!-- Show 6 posts -->
@@ -82,10 +82,16 @@
 	</div>
 </footer>
 <!--•••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••••-->
-<script src='http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js'></script>
+<script src='bower_components/jquery/dist/jquery.min.js'></script>
 <script src='js/main.js'></script>
 <script>
 	(function($){ $("document").ready(function(){
+		/* backBtn slide page to right screen after click */
+		(function(){
+			$(".backBtn").click(function(){
+				$(".container-fluid").animate({"left":"100%"}, 500, function(){ window.location.href="index.html" });
+			});
+		})();
 		/* Fix rightBar position */
 		(function(){
 			fixedMenuRight();
