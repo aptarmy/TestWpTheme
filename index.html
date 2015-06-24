@@ -96,6 +96,10 @@
 							<div class='sliderThumbBox'><div class='sliderThumb' style='background-image: url(img/slider/img-4.jpg)' data-title='Title of Post-4'></div></div>
 							<div class='sliderThumbBox'><div class='sliderThumb' style='background-image: url(img/slider/img-1.jpg)' data-title='Title of Post-5'></div></div>
 						</div>
+						<div class='showFullImgShadow'>
+							<div class='showFullImg'><img src=''></div>
+							<div class='closeFullImg'></div>
+						</div>
 					</div>
 				</div>
 				<!-- Bar Right -->
@@ -184,6 +188,38 @@
 					currentPage = href;
 					$("header nav li").find("img").removeClass("highlight");
 					$(this).find("img").addClass("highlight");
+				});
+			})();
+
+			// Show Full Image
+			(function(){
+				$(".sliderImg").click(function(){
+					/* declare variable */
+					var $showFullImg = $(".showFullImg");
+					var $img = $showFullImg.find("img");
+					var bgAttr = $(this).css("background-image");
+					var bgUrl = bgAttr.slice(4,-1);
+					function calFullImgPos(){
+						var showFullImgH = $showFullImg.height();
+						var imgH = $img.height();
+						if(imgH > showFullImgH){
+							$img.css({"height":"100%", "width":"auto"});
+						}
+						$(".closeFullImg").css({"left": $img.offset().left+$img.width()-20+"px", "top":$img.offset().top-$(window).scrollTop()-20+"px"});
+					}
+					/* statement */
+					$img.css({"height":"", "width":""});
+					$img.attr("src", bgUrl);
+					$img.load(function(){
+						$(".showFullImgShadow").fadeIn();
+						calFullImgPos();
+						$(window).resize(function(){ calFullImgPos() });
+					});
+				});
+				$(".showFullImgShadow").click(function(){
+					$(this).fadeOut(function(){
+						$(".showFullImg").find("img").attr("src", "");
+					});
 				});
 			})();
 		});

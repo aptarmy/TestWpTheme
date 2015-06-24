@@ -1,6 +1,6 @@
 .barRight {
     position: static;
-    margin: 10px 0 0 0;
+    padding: 10px 0 0 0;
 }
 .menuRight {
     height: 100% !important;
