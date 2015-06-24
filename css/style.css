@@ -255,8 +255,12 @@ header nav li img.highlight {
 .sliderThumb:hover {
     -webkit-filter: brightness(1.3);
 }
+.barRightRelative {
+    position: relative;
+}
 .barRight {
     position: absolute;
+    width: 100%;
 }
 .menuRight {
 	background-image: url(../img/wooden-bg.jpg);
@@ -325,13 +329,9 @@ footer {
     display: flex;
     align-items: center;
 }
-@media (min-width: 992px){
-    .row-full-height {
-        display: table-row;
-    }
-    .col-full-height {
-        display: table-cell;
-        float: none;
+@media (min-width:992px){
+    .display-flex {
+        display: flex;
     }
 }
 /* Post */
