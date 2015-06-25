@@ -270,7 +270,7 @@ header nav li img.highlight {
 	padding: 10px 17px;
 	margin: 10px 0 0 0;
 	overflow-y: hidden;
-    -ms-overflow: scroll;
+	-ms-overflow-y: scroll;
 }
 .menuRight:hover {
 	overflow-y: overlay;
