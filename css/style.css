@@ -115,11 +115,12 @@ header .pageIcon {
 	height: 100%;
 	float: left;
 }
-header .pageTitle {
+header .pageTitle h1 {
 	float: left;
 	color: white;
 	text-shadow: 1px 2px 0px black;
 	padding: 0 5px;
+    margin: 0;
 	font-weight: bold;
 	font-size: 2.2em;
     line-height: 45px;
@@ -308,6 +309,15 @@ header nav li img.highlight {
 	background-color: rgb(0,0,0);
 	box-shadow: 5px 10px 30px rgb(50,50,50)  inset, 0px 1px 0pc rgb(40,20,0);
 }
+.pageSlide h2 {
+    font-size: 20px;
+    text-align: center;
+    margin: 10px 0 0 0;
+    padding: 15px;
+    background-color: whitesmoke;
+    color: block;
+    border-radius: 20px;
+}
 .page {
     margin: 10px 0 0 0;
     height: 500px;
@@ -405,6 +415,12 @@ footer {
 	min-height: 550px;
 	position: relative;
 }
+.posts h2 {
+    margin: 10px 0 0 0;
+    padding: 15px;
+    text-align: center;
+    background-color: white;
+}
 .post-img {
 	height: 250px;
 	padding: 0 5px;
@@ -443,11 +459,12 @@ footer {
 	left: 0px;
 	right: 0px;
 	font-size: 20px;
-	padding: 0 15px;
+	padding: 5px 15px;
 	background-color: rgba(255,255,255,0.5);
 }
-.postTitle a {
+.postTitle a h3 {
     color: rgb(0,20,0);
+    margin: 0;
 }
 .backBtn {
     max-width: 100%;
