@@ -331,9 +331,12 @@ footer {
 .pos-absolute {
     position: absolute;
 }
-.v-center {
+.row-v-center {
     display: flex;
     align-items: center;
+}
+.col-v-center {
+    padding: 0 1px;
 }
 @media (min-width:992px){
     .display-flex {
@@ -409,7 +412,7 @@ footer {
 }
 .posts h2 {
 	font-size: 2em;
-	margin: 2px 0 -1px 0;
+	margin: 1px 0 -1px 0;
 	padding: 7px 0;
 	text-align: center;
 	font-weight: bold;
