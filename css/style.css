@@ -12,13 +12,13 @@ Use it to make something cool, have fun, and share what you've learned with othe
 
 /* Layout Overwrite */
 .container-fluid {
-    padding: 0 10px;
+    padding: 0 3px;
 }
 .col-sm-1, .col-sm-2, .col-sm-3, .col-sm-4, .col-sm-5, .col-sm-6, .col-sm-7, .col-sm-8, .col-sm-9, .col-sm-10, .col-sm-11, .col-sm-12, .col-md-1, .col-md-2, .col-md-3, .col-md-4, .col-md-5, .col-md-6, .col-md-7, .col-md-8, .col-md-9, .col-md-10, .col-md-11, .col-md-12 {
-    padding: 0 5px;
+    padding: 0 1.5px;
 }
 .row {
-    margin: 0 -5px;
+    margin: 0 -1.5px;
 }
 /*  end Layout Overwrite */
 
@@ -30,7 +30,7 @@ body {
 	background-attachment: fixed;
 }
 .barLeft {
-    margin: 10px 0 0 0;
+    margin: 3px 0 0 0;
 }
 .logo {
     max-width: 100%;
@@ -42,7 +42,7 @@ body {
 	background-color: rgb(50,50,50);
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
 	padding: 5px 12px 12px;
-	margin-top: 10px;
+	margin-top: 3px;
 }
 .menuLeft {
 	background-color: rgb(26,26,26);
@@ -98,7 +98,7 @@ body {
     display: none;
 }
 .adsWidget {
-    margin: 10px auto 0;
+    margin: 3px auto 0;
 }
 .adsWidget img {
     width: 100%;
@@ -196,11 +196,11 @@ header nav li img.highlight {
 .sliderWrapper {
 	height: 545px;
 	position: relative;
-    margin: 10px 0 0 0;
+       margin: 3px 0 0 0;
 }
 .sliderImg {
 	width: 100%;
-	height: 435px;
+	height: 442px;
 	position: relative;
 	background-size: cover;
 	background-position: center;
@@ -231,7 +231,7 @@ header nav li img.highlight {
     height: 100px;
     width: 100%;
     overflow: hidden;
-    margin-top: 10px;
+    margin-top: 3px;
     background-color: white;
     background-size: auto 100%;
     padding: 5px 2.5px;
@@ -261,6 +261,7 @@ header nav li img.highlight {
 }
 .barRight {
     position: absolute;
+    margin: 3px 0 0 0;
     width: 100%;
 }
 .menuRight {
@@ -268,7 +269,7 @@ header nav li img.highlight {
 	background-size: cover;
 	height: 545px;
 	padding: 10px 17px;
-	margin: 10px 0 0 0;
+	margin: 3px 0 0 0;
 	overflow-y: hidden;
 	-ms-overflow-y: scroll;
 }
@@ -309,23 +310,14 @@ header nav li img.highlight {
 	background-color: rgb(0,0,0);
 	box-shadow: 5px 10px 30px rgb(50,50,50)  inset, 0px 1px 0pc rgb(40,20,0);
 }
-.pageSlide h2 {
-    font-size: 20px;
-    text-align: center;
-    margin: 10px 0 0 0;
-    padding: 15px;
-    background-color: whitesmoke;
-    color: block;
-    border-radius: 20px;
-}
 .page {
-    margin: 10px 0 0 0;
+    margin: 3px 0 0 0;
     height: 500px;
     background-color: whitesmoke;
     padding: 15px 10px;
 }
 footer {
-    margin: 10px 0 0 0;
+    margin: 3px 0 0 0;
     padding: 15px 0;
     background: rgb(10,10,10);
 }
@@ -350,7 +342,7 @@ footer {
 }
 /* Post */
 .content {
-	margin-top: 10px;
+	margin-top: 3px;
 	min-height: 700px;
 	background-color: whitesmoke;
 }
@@ -375,7 +367,7 @@ footer {
 	background-color: black;
 }
 .relatePosts {
-    margin-top: 10px;
+    margin-top: 5px;
 }
 .relatePosts h3 {
     color: white;
@@ -386,7 +378,7 @@ footer {
     width: 100%;
     height: 200px;
     padding: 0 5px;
-    margin-top: 10px;
+    margin-top: 3px;
     position: relative;
     background-size: cover;
     background-position: center;
@@ -416,15 +408,20 @@ footer {
 	position: relative;
 }
 .posts h2 {
-    margin: 10px 0 0 0;
-    padding: 15px;
-    text-align: center;
-    background-color: white;
+	font-size: 2em;
+	margin: 2px 0 -1px 0;
+	padding: 7px 0;
+	text-align: center;
+	font-weight: bold;
+	color: rgb(240,240,220);
+	text-shadow: 2px 2px 0px rgb(0,0,0);
+	box-shadow: 0px 10px 40px -5px rgba(0,0,0,.8) inset, 0px -10px 40px -2px rgba(0,0,0,.8) inset;
+	background-color: rgb(50, 60, 70);
 }
 .post-img {
 	height: 250px;
 	padding: 0 5px;
-	margin: 10px 0 0 0;
+	margin: 5px 0 0 0;
 }
 @media (min-width:768px) {
     .post-img {
@@ -440,7 +437,7 @@ footer {
 }
 .post {
 	height: 250px;
-    margin-top: 10px;
+    margin-top: 3px;
 	background-size: cover;
 	background-position: center;
 	position: relative;
@@ -490,7 +487,7 @@ footer {
     background-color: rgb(255,255,0);
 }
 .apt-pager {
-	padding: 10px 0;
+	padding: 5px 0;
     margin: 0 -2px;
 }
 .apt-pager-text {

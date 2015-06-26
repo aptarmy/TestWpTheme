@@ -52,7 +52,7 @@
 	</div>
 	<aside class='col-md-2'>
 		<div class='barRightRelative'>
-			<div class='barRight' style='margin-top:10px;'>
+			<div class='barRight'>
 				<img class='logo' src='img/news-logo.png'>
 				<nav class='menuRight'>
 					<div class='backBtnText hidden-md hidden-lg'><a href='index.html'>Home</a></div>
@@ -105,10 +105,10 @@
 				var $col = $barRight.closest(".col-md-2"), colH = $col.height(), colT = $col.offset().top;
 				var $footer = $("footer"), footerT = $footer.offset().top;
 				var winT = $(window).scrollTop(), winH = $(window).height();
-				if((winT+barRightH) <= (footerT-20)){
+				if((winT+barRightH) <= (footerT-6)){ // minus 6 = space-top 3px + space-bottom 3px
 					$barRight.css({"top": winT+"px"});
 				}else{
-					$barRight.css({"top": winT - ((winT+winH) - colH)+ 10 + "px"});
+					$barRight.css({"top": winT - ((winT+winH) - colH)+ 3 + "px"});
 				}
 			}
 			/* define menuRight HEIGHT */
@@ -120,10 +120,10 @@
 				var menuRightTop = $menuRight.offset().top;
 				var winH = $(window).height();
 				var winT = $(window).scrollTop();
-				if((winT+barRightH) <= (footerT-10)){
-					$menuRight.css({"height" : ((winH+winT) - menuRightTop - 10)+"px"});
+				if((winT+barRightH) <= (footerT-6)){
+					$menuRight.css({"height" : ((winH+winT) - menuRightTop - 3)+"px"});
 				} else {
-					 $menuRight.css({"height" : ((winH+winT) - menuRightTop - ((winT+winH)-(footerT)) - 10)+"px"});
+					 $menuRight.css({"height" : ((winH+winT) - menuRightTop - ((winT+winH)-(footerT)) - 3)+"px"});
 				}
 			}
 			/* browser's window even */
