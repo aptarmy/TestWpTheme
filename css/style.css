@@ -149,8 +149,10 @@ header nav li img:hover {
 header nav li img.highlight {
     opacity: 1;
 }
-.collapseBtn {
+.collapseNav {
     display: none;
+}
+.collapseNav .collapseBtn {
     height: 45px;
     line-height: 45px;
     font-size: 30px;
@@ -159,6 +161,16 @@ header nav li img.highlight {
     margin: 0 20px;
     cursor: pointer;
     text-shadow: 0px 1px 0px rgb(25, 150, 45);
+}
+.collapseNav .collapseShadow {
+    position: fixed;
+    left: 0px;
+    top: 0px;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0,0,0,0.8);
+    display: none;
+    z-index: 99;
 }
 .searchWrapper {
 	float: right;
@@ -270,11 +282,8 @@ header nav li img.highlight {
 	height: 545px;
 	padding: 10px 17px;
 	margin: 3px 0 0 0;
-	overflow-y: hidden;
-	-ms-overflow-y: scroll;
-}
-.menuRight:hover {
 	overflow-y: overlay;
+	-ms-overflow-y: scroll;
 }
 .menuRight::-webkit-scrollbar {
 	width: 2px;
@@ -412,7 +421,7 @@ footer {
 }
 .posts h2 {
 	font-size: 2em;
-	margin: 2px 0 -1px 0;
+	margin: 3px 0 -1px 0;
 	padding: 7px 0;
 	text-align: center;
 	font-weight: bold;
@@ -470,11 +479,14 @@ footer {
     max-width: 100%;
     max-height: 90px;
     cursor: pointer;
+    display: block;
+    margin: 0 auto;
+    cursor: pointer;
 }
 .backBtn:hover {
     -webkit-filter: brightness(1.5);
 }
-.backBtnText a {
+.backBtnText {
     display: block;
     width: 100%;
     padding: 6px 0px;
@@ -484,8 +496,9 @@ footer {
     background-color: rgb(200,200,0);
     color: black;
     text-decoration: none;
+    cursor: pointer;
 }
-.backBtnText a:hover {
+.backBtnText:hover {
     background-color: rgb(255,255,0);
 }
 .apt-pager {

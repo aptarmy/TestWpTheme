@@ -10,9 +10,17 @@ header nav {
     right: -100px;
     background-color: whitesmoke;
     box-shadow: 0px 0px 10px black;
+    -ms-overflow: scrolling;
+    overflow: overlay;
 }
 header nav.expand {
     right: 0px;
+}
+header nav::-webkit-scrollbar {
+    width: 3px;
+}
+header nav::-webkit-scrollbar-thumb {
+    background-color: rgb(150,150,150);
 }
 header nav ul {
     margin: 0;
@@ -26,6 +34,9 @@ header nav li {
 header .searchWrapper {
     display: none;
 }
-header .collapseBtn {
+header .collapseNav {
+    display: block;
+}
+header .collapseNav .collapseShadow.show {
     display: block;
 }
