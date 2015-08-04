@@ -20,8 +20,10 @@
                     $(".mainArea").slideDown();
                 }
                 currentPage = href;
-                $("header nav li").find("img").removeClass("highlight");
-                $(this).find("img").addClass("highlight");
+                $("header nav li").find("a").removeClass("highlight");
+                $("header nav").removeClass("expand");
+                $(".collapseShadow").removeClass("show");
+                $(this).addClass("highlight");
             });
         })();
 
