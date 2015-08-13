@@ -76,5 +76,6 @@
             $(this).css({"display":"none"});
             return false;
         });
+		$(".post a").click(function(e){ e.stopPropagation(); });
     })();
 });})(jQuery);

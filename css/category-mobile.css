@@ -39,3 +39,11 @@
     text-align: center;
     box-shadow: 0px 0px 20px rgba(0, 0, 0, 0.5);
 }
+.apt-pager-text {
+	font-size: 1.4em;
+	padding: 0 10px;
+}
+.apt-pager li a {
+	font-size: 1.4em;
+	padding: 0 20px;
+}

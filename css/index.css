@@ -1,3 +1,7 @@
+/* grid */
+.leftCol {padding: 0 1.5px 3px}
+.rightCol {padding: 0 3px 1.5px}
+/* end grid */
 /* menu left */
 .menuLeftWrapper {
 	border-radius: 30px;
@@ -35,17 +39,19 @@
 	color: rgb(200,200,180); /* ขาวซีด */
 	font-size: 22px;
 	line-height: 28px;
+	padding-left: 10px;
 }
 .menuLeft>ul>li>a:before {
-	content: '★';
-	font-size: 24px;
-	color:orange; /* ส้มสว่าง */
+	content: '\e006';
+	font-family: 'Glyphicons Halflings';
+	font-size: 20px;
+	color: orange; /* ส้มสว่าง */
 }
 .menuLeft>ul>li>ul>li>a:before {
 	content: '\e142';
 	font-family: 'Glyphicons Halflings';
 	font-size: 16px;
-	color:rgb(170,170,180); /* ขาวซีด */
+	color: rgb(170,170,180); /* ขาวซีด */
 }
 .menuLeft>ul>li>ul>li>a {
 	color : rgb(20,180,100); /* เขียวแก่ */
@@ -63,14 +69,14 @@
 
 /* Top Nav */
 header {
-	margin-top: 25px;
+	margin-top: 10px;
 	height: 45px;
 	border-radius: 20px;
-	background-color: rgb(0,110,0);
-	box-shadow: 0px 15px 20px 6px rgba(120, 200, 240, .3) inset;
+	background-color: rgb(0,100,0);
+	box-shadow: 0px 15px 20px 8px rgba(120, 200, 100, .8) inset;
 }
 header .pageIcon {
-	padding: 5px;
+	padding: 6px;
 	height: 100%;
 	float: left;
 }
@@ -78,7 +84,7 @@ header .pageTitle h1 {
 	float: left;
 	color: white;
 	text-shadow: 1px 2px 0px black;
-	padding: 0 5px;
+	padding: 0;
 	margin: 0;
 	font-weight: bold;
 	font-size: 2.2em;
@@ -89,16 +95,16 @@ header nav {
 	padding: 0 5px;
 	transition: right 0.2s ease;
 	position: relative;
-	z-index: 1000;
+	z-index: 100;
 }
 header nav ul {
 	padding: 0;
-	margin: 0 -3px;
+	margin: 0;
 }
 header nav li {
 	float: left;
 	list-style: none;
-	margin: -15px 3px 0 3px;
+	margin: -15px 0 0 0;
 	position: relative;
 }
 .collapseNav {
@@ -109,7 +115,6 @@ header nav li {
 	line-height: 45px;
 	font-size: 30px;
 	float: right;
-	padding: 2px 0;
 	margin: 0 20px;
 	cursor: pointer;
 	text-shadow: 0px 1px 0px rgb(25, 150, 45);
@@ -133,9 +138,10 @@ header nav li {
 	content: "\f002";
 	font-family: fontAwesome;
 	position: absolute;
-	top: 11px;
-	right: 5px;
+	top: 6px;
+	right: 10px;
 	color: #C0C0C0;
+	font-size: 1.4em;
 }
 .searchWrapper input[type=text] {
 	border: none;
@@ -152,14 +158,14 @@ header nav li {
 	outline: none;
 }
 .runningText {
-	height: 30px;
+	height: 40px;
 }
 .runningText marquee {
-	font-size: 1.5em;
+	font-size: 1.6em;
 	color: pink;
 	text-shadow: 0px 1px 0px rgb(100,100,100);
-	line-height: 40px;
-	height: 40px;
+	line-height: 34px;
+	height: 34px;
 }
 .sliderWrapper {
 	height: 545px;
@@ -232,5 +238,6 @@ header nav li {
 	height: 500px;
 	background-color: whitesmoke;
 	padding: 15px 10px;
+	width: 100%;
 }
 /* end page */

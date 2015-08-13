@@ -42,6 +42,9 @@
             $(".sliderImg").css({"background-image" : $(this).css("background-image")});
             $(".sliderTitle a").text($(this).data("title"));
         });
+		
+		/* prevent event bubble */
+		$(".sliderTitle a").click(function(e){ e.stopPropagation(); });
 
         (function(){
         	/* collapse button */

@@ -33,6 +33,7 @@
                     $(window).resize(function(){ calFullImgPos() });
                 });
             });
+			$(this).addClass("searchPointer");
         });
     };
 })(jQuery);
