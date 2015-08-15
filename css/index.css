@@ -1,13 +1,13 @@
 /* grid */
-.leftCol {padding: 0 1.5px 3px}
-.rightCol {padding: 0 3px 1.5px}
+.leftCol {padding: 0 3px 0 1.5px}
+.rightCol {padding: 0 1.5px 0 3px}
 /* end grid */
 /* menu left */
 .menuLeftWrapper {
 	border-radius: 30px;
 	background-color: rgb(50,50,50);
 	box-shadow: 0px 5px 10px 0px rgba(0, 0, 0, .5);
-	padding: 5px 12px 12px;
+	padding: 12px;
 	margin-top: 3px;
 }
 .menuLeft {
@@ -15,12 +15,6 @@
 	border-radius: 20px;
 	padding: 10px 0;
 	border: 2px solid rgb(10,10,10);
-}
-.menuLeftWrapper h2 {
-	color: rgb(240,230,10); /* เหลืองอ่อน */
-	text-align: center;
-	padding: 0;
-	margin: 0;
 }
 .menuLeft ul {
 	padding: 0;
@@ -39,7 +33,7 @@
 	color: rgb(200,200,180); /* ขาวซีด */
 	font-size: 22px;
 	line-height: 28px;
-	padding-left: 10px;
+	padding: 0 10px;
 }
 .menuLeft>ul>li>a:before {
 	content: '\e006';
@@ -96,6 +90,7 @@ header nav {
 	transition: right 0.2s ease;
 	position: relative;
 	z-index: 100;
+	height: 45px;
 }
 header nav ul {
 	padding: 0;
@@ -135,10 +130,10 @@ header nav li {
 	position: relative;
 }
 .searchWrapper:after {
-	content: "\f002";
-	font-family: fontAwesome;
+	content: "\e003";
+	font-family: 'Glyphicons Halflings';
 	position: absolute;
-	top: 6px;
+	top: 8px;
 	right: 10px;
 	color: #C0C0C0;
 	font-size: 1.4em;
@@ -158,14 +153,15 @@ header nav li {
 	outline: none;
 }
 .runningText {
+	margin-top: 3px;
 	height: 40px;
+	display: block;
 }
 .runningText marquee {
 	font-size: 1.6em;
 	color: pink;
 	text-shadow: 0px 1px 0px rgb(100,100,100);
-	line-height: 34px;
-	height: 34px;
+	line-height: 40px;
 }
 .sliderWrapper {
 	height: 545px;
