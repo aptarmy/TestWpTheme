@@ -1,7 +1,9 @@
+// Localize script before using this plugin in Wordpress
+
 (function($){
     $.fn.showFullImg = function() {
         var showFullImgElement = "<div class='showFullImgShadow'><div class='showFullImg'><img src=''></div><div class='closeFullImg'></div></div>";
-        var linkStyle = "<link rel='stylesheet' href='js/lib/showFullImg/showFullImg.css'>";
+        var linkStyle = "<link rel='stylesheet' href='"+ localized_data.theme_uri +"/js/lib/showFullImg/showFullImg.css'>";
         $("body").append(showFullImgElement).append(linkStyle);
         $("body").on("click", ".showFullImgShadow", function(){
             $(".showFullImgShadow").fadeOut(function(){

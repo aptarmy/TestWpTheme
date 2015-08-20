@@ -1,5 +1,5 @@
 .searchPointer {
-	cursor: url('search-pointer.png'), url('search-pointer.png'), auto;
+	cursor: url('search-pointer.png') 20 20, auto;
 }
 .showFullImgShadow {
     left: 0px;
