@@ -3,6 +3,9 @@
     margin: 3px 0 0 0;
     width: 100%;
 }
+.menuRight {
+	height: 515px !important;
+}
 /* end bar right */
 
 /* collapse button */

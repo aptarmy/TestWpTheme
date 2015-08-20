@@ -4,7 +4,9 @@
     (function(){
         fnSlidePage = function (){ $(".barRight").css({"position":"static"}); $(".container-fluid").animate({"left":"100%"}, 500, function(){ window.location.href=localized_data.site_url; }); }
         $(".backBtn").click(function(){ fnSlidePage(); });
-    })();    
+    })();
+    // stick .menuRight when scrolling
+    $(".barRight").stick_in_parent();
     /* Show Full image */
     $(".post").showFullImg();
     // Collapse Button

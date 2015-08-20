@@ -23,16 +23,14 @@
 		</aside>
 	</div>
 	<aside class='col-md-2'>
-		<div class='barRightRelative'>
-			<div class='barRight'>
-			<a href="<?php echo esc_url(home_url('/')); ?>"><img class='logo hidden-sm hidden-xs' src='<?php header_image(); ?>'></a>
-				<nav class='menuRight'>
-					<div class='backBtnText hidden-md hidden-lg'>Home</div>
-					<?php wp_nav_menu( array('theme_location' => 'right-menu', 'container'=>'')); ?>
-				</nav>
-				<div class='menuRightShadow'></div>
-				<div class='cat-collapseBtn'><span class='glyphicon glyphicon-menu-hamburger'></span></div>
-			</div>
+		<div class='barRight'>
+		<a href="<?php echo esc_url(home_url('/')); ?>"><img class='logo hidden-sm hidden-xs' src='<?php header_image(); ?>'></a>
+			<nav class='menuRight'>
+				<div class='backBtnText hidden-md hidden-lg'>Home</div>
+				<?php wp_nav_menu( array('theme_location' => 'right-menu', 'container'=>'')); ?>
+			</nav>
+			<div class='menuRightShadow'></div>
+			<div class='cat-collapseBtn'><span class='glyphicon glyphicon-menu-hamburger'></span></div>
 		</div>
 	</aside>
 </div> </div>

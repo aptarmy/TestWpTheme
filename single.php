@@ -4,7 +4,7 @@
 	<div class='col-md-3 hidden-sm hidden-xs'> <!-- Extra small : 768px -->
 		<div class='logoCancel'>
 			<a href="<?php echo esc_url(home_url('/')); ?>"><img class='logo' src='<?php header_image(); ?>'></a>
-			<img class='cancel' src='<?php echo get_template_directory_uri(); ?>/icons/home.jpg'>
+			<div class='cancel'></div>
 		</div>
 		<div class='adsWidget'>
 			<?php if(get_theme_mod('single_leftbar_ads_btnset')) { ?>
