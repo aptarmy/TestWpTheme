@@ -10,7 +10,7 @@
 						<?php
 							switch (get_theme_mod('archive_top_ads_btnset')) {
 								case 'img':
-									echo '<a href="'. esc_url(get_theme_mod('archive_top_ads_iamge_link')) .'" target="_blank"><img src="'. esc_url(get_theme_mod('archive_top_ads_image')) .'"></a>';
+									echo '<a href="'. esc_url(get_theme_mod('archive_top_ads_image_link')) .'" target="_blank"><img src="'. esc_url(get_theme_mod('archive_top_ads_image')) .'"></a>';
 									break;
 								case 'code':
 									echo get_theme_mod('archive_top_ads_adscode');

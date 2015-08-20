@@ -124,7 +124,7 @@
 		) );
 		Kirki::add_field( 'my_config', array(
 			'type'        => 'text',
-			'settings'     => 'archive_top_ads_iamge_link',
+			'settings'     => 'archive_top_ads_image_link',
 			'label'       => __( 'link for Ads image', 'aptnews' ),
 			'description' => __( 'This link will be used for image link', 'aptnews' ),
 			'section'     => 'archive_top_ads_section',
@@ -170,7 +170,7 @@
 		) );
 		Kirki::add_field( 'my_config', array(
 			'type'        => 'text',
-			'settings'     => 'single_leftbar_ads_iamge_link',
+			'settings'     => 'single_leftbar_ads_image_link',
 			'label'       => __( 'link for Ads image', 'aptnews' ),
 			'description' => __( 'This link will be used for image link', 'aptnews' ),
 			'section'     => 'single_leftbar_ads_section',
