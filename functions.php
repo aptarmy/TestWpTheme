@@ -61,8 +61,8 @@
 			'search-form', 'comment-form', 'comment-list', 'gallery', 'caption',
 		) );
 		register_nav_menus( array(
-			'primary' => esc_html__( 'Top Menu', 'aptnews' ),
-			'right-menu' => esc_html__( 'Right Menu', 'aptnews' ),
+			'top_menu' => __( 'Top Menu', 'aptnews' ),
+			'right_menu' => __( 'Right Menu', 'aptnews' ),
 		) );
 
 	}

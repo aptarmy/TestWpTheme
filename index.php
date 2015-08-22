@@ -45,7 +45,7 @@
 			<img class='pageIcon' src='<?php echo get_template_directory_uri() ?>/icons/green-circle.png'>
 			<div class='pageTitle'><a href="<?php echo site_url(); ?>"><h1><?php (bloginfo('name')) ?></h1></a></div>
 			<?php get_search_form(); ?>
-			<?php wp_nav_menu( array('theme_location' => 'primary', 'container'=>'nav', 'link_before'=>'<div class="menu-icon"></div><span class="menu-caption">', 'link_after'=>'</span>')); ?>
+			<?php wp_nav_menu( array('theme_location' => 'top_menu', 'container'=>'nav', 'link_before'=>'<div class="menu-icon"></div><span class="menu-caption">', 'link_after'=>'</span>')); ?>
 			<div class='collapseNav'><span class='collapseBtn glyphicon glyphicon-menu-hamburger'></span><div class='collapseShadow'></div></div>
 		</header>
 		<!-- Running Text -->
@@ -76,25 +76,29 @@
 				<!-- Bar Right -->
 				<aside class='col-md-2-in-9'>
 					<div class='menuRight'>
-						<?php wp_nav_menu( array('theme_location' => 'right-menu', 'container'=>'')); ?>
+						<?php wp_nav_menu( array('theme_location' => 'right_menu', 'container'=>'')); ?>
 					</div>
 				</aside>
 			</div>
 		</div>
 		<!-- Content under slider -->
 		<div class='pageSlide'>
-			<?php $objMenus = (wp_get_nav_menu_items('Top Menu')); ?>	
-			<?php foreach($objMenus as $objMenu) { ?>
-				<?php if($objMenu->post_name == 'home'){ continue; } ?>
-				<?php $pageQuery = new WP_Query('page_id=' . get_post_meta($objMenu->ID, '_menu_item_object_id', true )); ?>
-					<?php while($pageQuery->have_posts()) { $pageQuery->the_post(); ?>
-						<div class='page' style='background-color:whitesmoke'>
-							<a href='<?php the_permalink(); ?>'><h2><?php the_title(); ?></h2></a>
-							<?php aptnews_posted_on(); ?>
-							<p style='font-size:50px;text-align:center;color:darkgray'><?php the_content(); ?></p>
-						</div>
-					<?php } ?>
-			<?php } ?>
+			<?php
+				if ( ( $locations = get_nav_menu_locations() ) && isset( $locations[ 'top_menu'] ) ) {
+					$menu_items = wp_get_nav_menu_items($locations[ 'top_menu' ]);
+					foreach($menu_items as $menu_item) {
+						if($menu_item->url == get_site_url()){ continue; }
+						$pageQuery = new WP_Query('page_id=' . get_post_meta($menu_item->ID, '_menu_item_object_id', true ));
+						while($pageQuery->have_posts()) { $pageQuery->the_post();
+			?>
+							<div class='page' style='background-color:whitesmoke'>
+								<a href='<?php the_permalink(); ?>'><h2><?php the_title(); ?></h2></a>
+								<?php aptnews_posted_on(); ?>
+								<p style='font-size:50px;text-align:center;color:darkgray'><?php the_content(); ?></p>
+							</div>
+			<?php		}
+					}
+				} ?>
 		</div>
 	</div>
 </div> </div>
