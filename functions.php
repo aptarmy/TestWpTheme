@@ -10,7 +10,7 @@
 			wp_enqueue_style('aptnews-index', get_template_directory_uri() . '/css/index.css');
 			wp_enqueue_style('aptnews-extra-grid', get_template_directory_uri() . '/css/extra-grid.css');
 			wp_enqueue_style('aptnews-menu-icons', get_template_directory_uri() . '/css/menu-icons/menu-icons.css');
-		} elseif (is_archive() || is_search() || is_home()) {
+		} elseif (is_archive() || is_search()) {
 			wp_enqueue_style('aptnews-archive', get_template_directory_uri() . '/css/archive.css');
 		} else {
 			wp_enqueue_style('aptnews-single', get_template_directory_uri() . '/css/single.css');
@@ -25,7 +25,7 @@
 			// Enqueue Script
 			wp_enqueue_script('aptnews-showFullImg');
 			wp_enqueue_script('aptnews-index', get_template_directory_uri() . '/js/index.js', array('jquery'), 1);
-		} elseif (is_archive() || is_search() || is_home()) {
+		} elseif (is_archive() || is_search()) {
 			// Register SCRIPT
 			wp_register_script('aptnews-showFullImg', get_template_directory_uri() . '/js/lib/showFullImg/showFullImg.js', array('jquery'), 1);
 			// Localize script
