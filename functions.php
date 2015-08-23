@@ -63,6 +63,7 @@
 		register_nav_menus( array(
 			'top_menu' => __( 'Top Menu', 'aptnews' ),
 			'right_menu' => __( 'Right Menu', 'aptnews' ),
+			'left_menu' => __('Left menu', 'aptnews'),
 		) );
 
 	}

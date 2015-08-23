@@ -9,12 +9,12 @@
 				var $allPages = $(".pageSlide").find(".page");
 				if(currentPage === href){ return false; }
 				$allPages.slideDown();
-				$(".mainArea").prev(".page").remove();
+				$(".mainArea").next(".page").slideUp(function(){ $(this).remove(); });
 				if (href !== localized_data.site_url+"/"){
 					$(".runningText").slideUp();
 					$(".mainArea").slideUp();
-					$specificPage.slideUp().clone().css({"display":"none"}).insertBefore(".mainArea");
-					$(".mainArea").prev(".page").slideDown('slow');
+					$specificPage.slideUp().clone().css({"display":"none"}).insertAfter(".mainArea");
+					$(".mainArea").next(".page").slideDown();
 				} else {
 					$(".runningText").slideDown();
 					$(".mainArea").slideDown();

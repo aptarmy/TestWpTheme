@@ -240,11 +240,18 @@ header nav li {
 /* end top nav */
 
 /* page */
+.mainArea + .page {
+	margin-top: 8px !important;
+}
 .page {
-	margin: 3px 0 0 0;
+	margin-top: 3px;
 	background-color: whitesmoke;
-	padding: 15px 10px;
+	padding: 5px 10px;
 	width: 100%;
+}
+.page h2 {
+	padding: 0;
+	margin: 0;
 }
 /* end page */
 

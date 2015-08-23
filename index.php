@@ -7,17 +7,7 @@
 		<aside class='barLeft'>
 			<div class='menuLeftWrapper'>
 				<div class="menuLeft">
-					<ul>
-						<?php if(get_theme_mod('frontpage_leftbar_tags_field')) { ?>
-							<?php $opt_tagsArr = trim_whitespace_in_comma_text(get_theme_mod('frontpage_leftbar_tags_field')); ?>
-							<?php foreach($opt_tagsArr as $opt_tag) { ?>
-								<?php if($opt_tag == '') { continue; } ?>
-								<li><a href='#'><?php echo (get_term_by('slug', $opt_tag, 'post_tag')) ? (get_term_by('slug', $opt_tag, 'post_tag')->name) : 'Cannot find given tag slug';//get tag-name by tag-slug ?></a>
-									<?php create_ul_list_from_given_tag($opt_tag, 5); ?>
-								</li>
-							<?php } ?>
-						<?php } ?>
-					</ul>
+					<?php wp_nav_menu( array('theme_location' => 'left_menu', 'container'=>false, 'depth'=>2, )); ?>
 				</div>
 			</div>
 			<div class='adsWidget'>
