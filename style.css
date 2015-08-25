@@ -8,6 +8,9 @@ Tags: black, brown, orange, tan, white, yellow, light, one-column, two-columns, 
 */
 
 /* Layout Overwrite */
+html, body {
+	font-size: 100%;
+}
 .container-fluid {
 	padding: 0 3px !important;
 }
@@ -76,7 +79,7 @@ body {
 	border-radius: 30px;
 	background-color: rgb(40, 40, 40);
 	box-shadow: 0px 5px 20px rgb(0, 0, 0) inset, 1px 1px 0pc rgb(220,190,190);
-	font-size: 20px;
+	font-size: 1.25em;
 }
 .menuRight li a:hover {
 	color: yellow;
