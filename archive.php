@@ -18,7 +18,7 @@
 							}
 						?>
 					<?php } else { ?>
-						<img src='<?php echo get_template_directory_uri() ?>/img/news-logo.png'>
+						<img src='<?php echo get_template_directory_uri() ?>/img/ads-728x90.jpg'>
 					<?php } ?>
 				</div>
 			</div>
