@@ -10,7 +10,7 @@
 				if(currentPage === href){ return false; }
 				$allPages.slideDown();
 				$(".mainArea").next(".page").slideUp(function(){ $(this).remove(); });
-				if (href !== localized_data.site_url+"/"){
+				if (!((href == localized_data.site_url+"/") || (href == localized_data.site_url))){
 					$(".runningText").slideUp();
 					$(".mainArea").slideUp();
 					$specificPage.slideUp().clone().css({"display":"none"}).insertAfter(".mainArea");

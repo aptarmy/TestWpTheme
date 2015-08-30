@@ -7,7 +7,11 @@
 		<aside class='barLeft'>
 			<div class='menuLeftWrapper'>
 				<div class="menuLeft">
-					<?php wp_nav_menu( array('theme_location' => 'left_menu', 'container'=>false, 'depth'=>2, )); ?>
+					<?php
+						if(has_nav_menu('left_menu')) {
+							wp_nav_menu( array('theme_location' => 'left_menu', 'container'=>false, 'depth'=>2, ));
+						}
+					?>
 				</div>
 			</div>
 			<div class='adsWidget'>
@@ -35,7 +39,7 @@
 			<img class='pageIcon' src='<?php echo get_template_directory_uri() ?>/icons/green-circle.png'>
 			<div class='pageTitle'><a href="<?php echo site_url(); ?>"><h1><?php (bloginfo('name')) ?></h1></a></div>
 			<?php get_search_form(); ?>
-			<?php wp_nav_menu( array('theme_location' => 'top_menu', 'container'=>'nav', 'link_before'=>'<div class="menu-icon"></div><span class="menu-caption">', 'link_after'=>'</span>')); ?>
+			<?php if(has_nav_menu('top_menu')) { wp_nav_menu( array('theme_location' => 'top_menu', 'container'=>'nav', 'link_before'=>'<div class="menu-icon"></div><span class="menu-caption">', 'link_after'=>'</span>')); } ?>
 			<div class='collapseNav'><span class='collapseBtn glyphicon glyphicon-menu-hamburger'></span><div class='collapseShadow'></div></div>
 		</header>
 		<!-- Running Text -->
@@ -66,7 +70,7 @@
 				<!-- Bar Right -->
 				<aside class='col-md-2-in-9'>
 					<div class='menuRight'>
-						<?php wp_nav_menu( array('theme_location' => 'right_menu', 'container'=>'')); ?>
+						<?php wp_nav_menu( array('theme_location' => 'right_menu', 'container'=>false)); ?>
 					</div>
 				</aside>
 			</div>

@@ -4,7 +4,7 @@
 			<div class='col-md-4'>
 				<div class='widget'>
 					<?php
-						if (is_active_sidebar( 'footer-right' )) {
+						if (is_active_sidebar( 'footer-left' )) {
 							dynamic_sidebar('footer-right');
 						}
 					?>
@@ -22,7 +22,7 @@
 			<div class='col-md-4'>
 				<div class='widget'>
 					<?php
-						if (is_active_sidebar( 'footer-left' )) {
+						if (is_active_sidebar( 'footer-right' )) {
 							dynamic_sidebar('footer-left');
 						}
 					?>

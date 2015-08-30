@@ -6,7 +6,6 @@
 				window.location.href = localized_data.site_url;
 			});
 		});
-
 		// set height of .cancel button equal to .logo
 		$(".cancel").css({"height": $(".logo").height()+"px"});
 	});

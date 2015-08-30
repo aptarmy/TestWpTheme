@@ -2,8 +2,9 @@
     var fnSlidePage;
     /* backBtn slide page to right screen after click */
     (function(){
-        fnSlidePage = function (){ $(".barRight").css({"position":"static"}); $(".container-fluid").animate({"left":"100%"}, 500, function(){ window.location.href=localized_data.site_url; }); }
-        $(".backBtn").click(function(){ fnSlidePage(); });
+        $(".cancel").css({"height": $(".logo").height()+"px"});
+        fnSlidePage = function (){ $(".barRight").css({"position":"static"}); $(".container-fluid").animate({"left":"100%"}, 500, function(){ window.location.href=localized_data.site_url; }); };
+        $(".cancel").click(function(){ fnSlidePage(); });
     })();
     // stick .menuRight when scrolling
     $(".barRight").stick_in_parent();
@@ -13,7 +14,7 @@
     (function(){
         // calculate fixed position
         function calCatCallapseBtnPos(){
-            if($(window).scrollTop() == 0){
+            if($(window).scrollTop() === 0){
                 $(".cat-collapseBtn").css({"top":$(".post").offset().top+5+"px"});
             }else if($(".post").eq(0).offset().top > $(window).scrollTop()){
                 $(".cat-collapseBtn").css({"top":$(".post").offset().top+5-$(window).scrollTop()+"px"});
@@ -22,7 +23,7 @@
             }
         }
         calCatCallapseBtnPos();
-        $(window).scroll(function(){ calCatCallapseBtnPos() }).resize(function(){ calCatCallapseBtnPos() });
+        $(window).scroll(function(){ calCatCallapseBtnPos(); }).resize(function(){ calCatCallapseBtnPos(); });
 
         // fire event
         $(".cat-collapseBtn").click(function(){

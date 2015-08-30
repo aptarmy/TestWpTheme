@@ -3,8 +3,8 @@
 	<!-- Right column -->
 	<div class='col-md-10'><!-- cal-full-height class will display as table-cell & make its siblings height equal to its height -->
 		<!-- Logo & Ads -->
-		<aside class='row row-v-center'><!-- v-center class make img.logo vertically center -->
-			<div class='col-md-11'>
+		<aside class='row'><!-- v-center class make img.logo vertically center -->
+			<div class='col-md-12'>
 				<div class='adsWidget'>
 					<?php if(get_theme_mod('archive_top_ads_btnset')) { ?>
 						<?php
@@ -18,11 +18,10 @@
 							}
 						?>
 					<?php } else { ?>
-						<img src='<?php echo get_template_directory_uri() ?>/img/ads-728x90.jpg'>
+						<img src='<?php echo get_template_directory_uri() ?>/img/ads-970x90.png'>
 					<?php } ?>
 				</div>
 			</div>
-			<div class='col-md-1 hidden-sm hidden-xs col-backBtn'><img class='backBtn' src='<?php echo get_template_directory_uri(); ?>/icons/home.png'></div>
 		</aside>
 		<!-- Show 6 posts -->
 		<section class='posts'>
@@ -41,10 +40,13 @@
 	</div>
 	<aside class='col-md-2'>
 		<div class='barRight'>
-			<a href="<?php echo esc_url(home_url('/')); ?>"><img class='logo hidden-sm hidden-xs' src='<?php header_image(); ?>'></a>
+			<div class='logoCancel'>
+				<a href="<?php echo esc_url(home_url('/')); ?>"><img class='logo hidden-xs hidden-sm' src='<?php header_image(); ?>'></a>
+				<div class='cancel'></div>
+			</div>
 			<nav class='menuRight'>
 				<div class='backBtnText hidden-md hidden-lg'>Home</div>
-				<?php wp_nav_menu( array('theme_location' => 'right_menu', 'container'=>'')); ?>
+				<?php wp_nav_menu( array('theme_location' => 'right_menu', 'container'=>false)); ?>
 			</nav>
 			<div class='menuRightShadow'></div>
 			<div class='cat-collapseBtn'><span class='glyphicon glyphicon-menu-hamburger'></span></div>

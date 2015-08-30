@@ -38,7 +38,6 @@
 .menuLeft>ul>li>a { /* Mainmenu Slide*/
 	color: rgb(200,200,180); /* ขาวซีด */
 	font-size: 1.375em;
-	line-height: 28px;
 	padding: 0 10px;
 }
 .menuLeft>ul>li>a:before {
@@ -48,6 +47,7 @@
 	color: orange; /* ส้มสว่าง */
 	display: inline-block;
 	margin-right: 5px;
+	vertical-align: middle;
 }
 .menuLeft>ul>li>ul>li>a:before {
 	content: '\e142';
@@ -248,6 +248,7 @@ header nav li {
 	background-color: whitesmoke;
 	padding: 5px 10px;
 	width: 100%;
+	font-size: 1.125em;
 }
 .page h2 {
 	padding: 0;
